@@ -6746,25 +6746,31 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
-.button {
+button.button {
+  overflow: hidden;
+  border: 2px solid white;
   color: white !important;
   min-width: 200px;
   min-height: 50px;
   background: linear-gradient(135deg, #6e8efb, #a777e3);
-  transition: box-shadow .5s ease, transform .2s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.2s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   border-radius: 4px !important;
   font-weight: bold;
   letter-spacing: 0.8px; }
-  .button span {
+  button.button#animated-btn span {
     display: inline-block;
     transition: all 0.5s; }
-  .button:before {
+  button.button#animated-btn:before {
     content: "Let's Go!";
     position: absolute;
     left: -100%;
     transition: all 0.5s; }
-  .button:hover:before {
+  button.button#animated-btn:hover:before {
     left: 37%; }
-  .button:hover span {
-    transform: translateX(300%); }
+  button.button#animated-btn:hover {
+    border: 2px solid white;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transform: translate(0px, -3px) scale(1.03); }
+    button.button#animated-btn:hover span {
+      transform: translateX(300%); }

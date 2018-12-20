@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 
+import HeroBanner from "components/hero-banner/hero-banner";
 import Button from "components/button/button";
 
 class FrontPage extends Component {
   render() {
-    return <Button label="Subscribe!" />;
+    return (
+      <React.Fragment>
+        <HeroBanner />
+        <Button label="Subscribe!" animated />
+      </React.Fragment>
+    );
   }
 }
 
