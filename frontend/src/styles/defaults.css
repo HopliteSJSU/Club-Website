@@ -357,7 +357,7 @@ table th {
   overflow: hidden !important; }
 
 .is-size-1 {
-  font-size: 3rem !important; }
+  font-size: 6rem !important; }
 
 .is-size-2 {
   font-size: 2.5rem !important; }
@@ -379,7 +379,7 @@ table th {
 
 @media screen and (max-width: 768px) {
   .is-size-1-mobile {
-    font-size: 3rem !important; }
+    font-size: 6rem !important; }
   .is-size-2-mobile {
     font-size: 2.5rem !important; }
   .is-size-3-mobile {
@@ -395,7 +395,7 @@ table th {
 
 @media screen and (min-width: 769px), print {
   .is-size-1-tablet {
-    font-size: 3rem !important; }
+    font-size: 6rem !important; }
   .is-size-2-tablet {
     font-size: 2.5rem !important; }
   .is-size-3-tablet {
@@ -411,7 +411,7 @@ table th {
 
 @media screen and (max-width: 1087px) {
   .is-size-1-touch {
-    font-size: 3rem !important; }
+    font-size: 6rem !important; }
   .is-size-2-touch {
     font-size: 2.5rem !important; }
   .is-size-3-touch {
@@ -427,7 +427,7 @@ table th {
 
 @media screen and (min-width: 1088px) {
   .is-size-1-desktop {
-    font-size: 3rem !important; }
+    font-size: 6rem !important; }
   .is-size-2-desktop {
     font-size: 2.5rem !important; }
   .is-size-3-desktop {
@@ -443,7 +443,7 @@ table th {
 
 @media screen and (min-width: 1280px) {
   .is-size-1-widescreen {
-    font-size: 3rem !important; }
+    font-size: 6rem !important; }
   .is-size-2-widescreen {
     font-size: 2.5rem !important; }
   .is-size-3-widescreen {
@@ -459,7 +459,7 @@ table th {
 
 @media screen and (min-width: 1472px) {
   .is-size-1-fullhd {
-    font-size: 3rem !important; }
+    font-size: 6rem !important; }
   .is-size-2-fullhd {
     font-size: 2.5rem !important; }
   .is-size-3-fullhd {
@@ -3397,7 +3397,7 @@ a.tag:hover {
   .title:not(.is-spaced) + .subtitle {
     margin-top: -1.25rem; }
   .title.is-1 {
-    font-size: 3rem; }
+    font-size: 6rem; }
   .title.is-2 {
     font-size: 2.5rem; }
   .title.is-3 {
@@ -3422,7 +3422,7 @@ a.tag:hover {
   .subtitle:not(.is-spaced) + .title {
     margin-top: -1.25rem; }
   .subtitle.is-1 {
-    font-size: 3rem; }
+    font-size: 6rem; }
   .subtitle.is-2 {
     font-size: 2.5rem; }
   .subtitle.is-3 {
@@ -4477,7 +4477,7 @@ body.has-navbar-fixed-bottom {
   overflow-y: hidden; }
 
 .navbar-burger {
-  color: #4a4a4a;
+  color: white;
   cursor: pointer;
   display: block;
   height: 3.25rem;
@@ -4515,7 +4515,7 @@ body.has-navbar-fixed-bottom {
 
 .navbar-item,
 .navbar-link {
-  color: #4a4a4a;
+  color: white;
   display: block;
   line-height: 1.5;
   padding: 0.5rem 0.75rem;
@@ -4757,7 +4757,7 @@ a.navbar-item,
     padding-bottom: 5.25rem; }
   a.navbar-item.is-active,
   .navbar-link.is-active {
-    color: #0a0a0a; }
+    color: white; }
   a.navbar-item.is-active:not(:hover),
   .navbar-link.is-active:not(:hover) {
     background-color: transparent; }
@@ -6745,3 +6745,125 @@ label.panel-block {
 .footer {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
+
+/* Import all your sass files from your components here */
+button.button {
+  outline: none;
+  overflow: hidden;
+  border: 2px solid white;
+  color: white !important;
+  min-width: 200px;
+  min-height: 50px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.2s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 4px !important;
+  font-weight: bold;
+  letter-spacing: 0.8px; }
+  button.button#animated-btn span {
+    display: inline-block;
+    transition: all 0.5s; }
+  button.button#animated-btn:before {
+    content: "Let's Go!";
+    position: absolute;
+    left: -100%;
+    transition: all 0.5s; }
+  button.button#animated-btn:hover:before {
+    left: 36%; }
+  button.button#animated-btn:hover {
+    border: 2px solid white;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transform: translate(0px, -3px) scale(1.03); }
+    button.button#animated-btn:hover span {
+      transform: translateX(300%); }
+
+button.button:focus {
+  text-decoration: none !important;
+  outline: none !important;
+  border-color: white !important;
+  tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; }
+
+div.container#email-sub {
+  display: inline-flex;
+  justify-content: center; }
+  div.container#email-sub div.container#input-container {
+    margin: 0px !important;
+    display: inline-flex;
+    justify-content: center;
+    width: 100%; }
+    div.container#email-sub div.container#input-container div.container.for-animation {
+      margin: 0px !important;
+      display: inline-flex;
+      justify-content: center;
+      transition: width 0.5s ease; }
+      div.container#email-sub div.container#input-container div.container.for-animation.hide {
+        opacity: 0;
+        width: 0% !important; }
+      div.container#email-sub div.container#input-container div.container.for-animation.show {
+        opacity: 1;
+        width: 50% !important; }
+      div.container#email-sub div.container#input-container div.container.for-animation:after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        z-index: 999;
+        height: 2px;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+        background-position: 0% 0%;
+        background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+        background-size: 500% auto;
+        animation: gradient 3s linear infinite; }
+      div.container#email-sub div.container#input-container div.container.for-animation span.icon {
+        color: white;
+        position: absolute;
+        right: 3%;
+        top: 25%;
+        transition: opacity 0.20s ease;
+        transition-delay: 0.40s; }
+        div.container#email-sub div.container#input-container div.container.for-animation span.icon.hide {
+          opacity: 0; }
+        div.container#email-sub div.container#input-container div.container.for-animation span.icon.show {
+          opacity: 1; }
+      div.container#email-sub div.container#input-container div.container.for-animation input#email-input {
+        font-size: 1.25rem;
+        color: white;
+        padding-left: 3.5%;
+        padding-right: 7%;
+        height: 50px;
+        border: none;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5); }
+        div.container#email-sub div.container#input-container div.container.for-animation input#email-input::placeholder {
+          color: rgba(255, 255, 255, 0.85);
+          padding-left: 5px; }
+        div.container#email-sub div.container#input-container div.container.for-animation input#email-input:focus {
+          border: none;
+          outline: none;
+          box-shadow: none;
+          background-color: rgba(0, 0, 0, 0.5);
+          color: white; }
+
+@keyframes gradient {
+  0% {
+    background-position: 0; }
+  100% {
+    background-position: 100%; } }
+
+section.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(236, 111, 102, 0.5)), url("bg.jpg");
+  background-size: cover;
+  background-position-x: 25%;
+  background-position-y: 25%; }
+  section.hero .hero-body .container .container {
+    margin: 3.5% 0 3.5% 0; }
+    section.hero .hero-body .container .container h1 {
+      color: white; }
+    section.hero .hero-body .container .container h2 {
+      color: white; }
+
+header.navbar .navbar-item:hover {
+  color: #3273dc; }

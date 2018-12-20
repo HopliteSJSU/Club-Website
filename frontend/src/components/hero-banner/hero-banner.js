@@ -1,51 +1,35 @@
 import React, { Component } from "react";
 
+import Navbar from "components/navbar/navbar";
+import EmailSubscribe from "components/email-sub/email-sub";
+
 class HeroBanner extends Component {
+  state = {
+    activeBurger: false
+  };
+
+  handleBurgerClick = () =>
+    this.setState(prevState => ({ activeBurger: !prevState.activeBurger }));
+
   render() {
+    const { activeBurger } = this.state;
+
     return (
-      <section class="hero is-success is-fullheight">
+      <section class="hero is-fullheight">
         <div class="hero-head">
-          <header class="navbar">
-            <div class="container">
-              <div class="navbar-brand">
-                <a class="navbar-item">
-                  <img
-                    src="https://bulma.io/images/bulma-type-white.png"
-                    alt="Logo"
-                  />
-                </a>
-                <span
-                  class="navbar-burger burger"
-                  data-target="navbarMenuHeroC"
-                >
-                  <span />
-                  <span />
-                  <span />
-                </span>
-              </div>
-              <div id="navbarMenuHeroC" class="navbar-menu">
-                <div class="navbar-end">
-                  <a class="navbar-item is-active">Home</a>
-                  <a class="navbar-item">Examples</a>
-                  <a class="navbar-item">Documentation</a>
-                  <span class="navbar-item">
-                    <a class="button is-success is-inverted">
-                      <span class="icon">
-                        <i class="fab fa-github" />
-                      </span>
-                      <span>Download</span>
-                    </a>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </header>
+          <Navbar
+            isActive={activeBurger}
+            burgerClick={this.handleBurgerClick}
+          />
         </div>
 
         <div class="hero-body">
-          <div class="container has-text-centered">
-            <h1 class="title">Title</h1>
-            <h2 class="subtitle">Subtitle</h2>
+          <div className="container is-inline-block">
+            <div class="container has-text-centered">
+              <h1 class="title is-1">Hoplite</h1>
+              <h2 class="subtitle is-2">Ace your coding interviews!</h2>
+            </div>
+            <EmailSubscribe />
           </div>
         </div>
       </section>

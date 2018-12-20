@@ -1,10 +1,23 @@
+// Put any custom variables in here to modify the Bulma defaults ///////////////
 @import "node_modules/bulma/sass/utilities/initial-variables.sass"
-
-// Put any custom variables in here to modify the Bulma defaults
 
 // Font defaults
 $family-primary: "Sarabun"
 $family-sans-serif: "Sarabun"
 
+// Title sizes
+$size-1: 6rem
+
+//Navbar defaults
+$navbar-item-color: white
+$navbar-item-active-color: white
+$navbar-item-hover-color: hsl(217, 71%, 53%)
 
 @import "node_modules/bulma/bulma.sass"
+////////////////////////////////////////////////////////////////////////////////
+
+/* Import all your sass files from your components here */
+@import "components/button/style/button.sass"
+@import "components/email-sub/style/email-sub.sass"
+@import "components/hero-banner/style/hero-banner.sass"
+@import "components/navbar/style/navbar"

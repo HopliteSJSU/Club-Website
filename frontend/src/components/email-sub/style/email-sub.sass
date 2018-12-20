@@ -1,0 +1,77 @@
+$input-background: rgba(0, 0, 0, .5)
+
+div.container#email-sub
+  display: inline-flex
+  justify-content: center
+  div.container#input-container
+    margin: 0px !important
+    display: inline-flex
+    justify-content: center
+    width: 100%
+    div.container.for-animation
+      margin: 0px !important
+      display: inline-flex
+      justify-content: center
+      transition: width 0.5s ease
+      &.hide
+        opacity: 0
+        width: 0% !important
+      &.show
+        opacity: 1
+        width: 50% !important
+      &:after
+        content: ""
+        position: absolute
+        left: 0px
+        right: 0px
+        bottom: 0px
+        z-index: 999
+        height: 2px
+        border-bottom-left-radius: 2px
+        border-bottom-right-radius: 2px
+        background-position: 0% 0%
+        background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6)
+        background-size: 500% auto
+        animation: gradient 3s linear infinite
+      span.icon
+        color: white
+        position: absolute
+        right: 3%
+        top: 25%
+        transition: opacity 0.20s ease
+        transition-delay: 0.40s
+        &.hide
+          opacity: 0
+        &.show
+          opacity: 1
+      input#email-input
+        font-size: 1.25rem
+        color: white
+        padding-left: 3.5%
+        padding-right: 7%
+        height: 50px
+        border: none
+        width: 100%
+        background-color: $input-background
+        &::placeholder
+          color: rgba(255,255,255, 0.85)
+          padding-left: 5px
+        &:focus
+          border: none
+          outline: none
+          box-shadow: none
+          background-color: $input-background
+          color: white
+
+
+@keyframes gradient
+  0%
+    background-position: 0
+  100%
+    background-position: 100%
+//
+// #email-sub
+//   display: inline-flex
+//   justify-content: center
+//   width: 100%
+//   background: $input-background

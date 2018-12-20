@@ -1,15 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "./style/button.css";
-
-const Button = ({ label, classes, styles, animated }) => {
+const Button = ({ label, classes, styles, clicked, animated }) => {
   let id = animated ? "animated-btn" : "";
   return (
     <React.Fragment>
       <button
-        className={`button is-rounded ${classes}`}
+        className={`button ${classes}`}
         style={{ ...styles }}
+        onClick={clicked}
         id={id}
       >
         <span>{label}</span>
