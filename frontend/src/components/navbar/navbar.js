@@ -19,9 +19,30 @@ const Navbar = ({ isActive, burgerClick }) => (
       </div>
       <div class={`navbar-menu ${isActive ? "is-active" : ""}`}>
         <div class="navbar-end">
-          <a class="navbar-item is-active">Home</a>
-          <a class="navbar-item">Examples</a>
-          <a class="navbar-item">Documentation</a>
+          <div class="navbar-item">
+            <span>Home</span>
+            <div class="border-bottom" />
+          </div>
+          <div class="navbar-item">
+            <span>About Us</span>
+            <div class="border-bottom" />
+          </div>
+          <div class="navbar-item">
+            <span>Leadership</span>
+            <div class="border-bottom" />
+          </div>
+          <div class="navbar-item">
+            <span>Projects</span>
+            <div class="border-bottom" />
+          </div>
+          <div class="navbar-item">
+            <span>Sponsors</span>
+            <div class="border-bottom" />
+          </div>
+          <div class="navbar-item">
+            <span>Apply to join</span>
+            <div class="border-bottom" />
+          </div>
         </div>
       </div>
     </div>

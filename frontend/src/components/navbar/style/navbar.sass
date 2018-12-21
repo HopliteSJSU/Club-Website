@@ -1,3 +1,34 @@
 header.navbar
-  .navbar-item:hover
-    color: hsl(217, 71%, 53%)
+  .container:nth-child(1)
+    max-width: 1650px
+    padding-left: 5%
+    padding-right: 5%
+  .navbar-menu
+    .navbar-end
+      .navbar-item:not(:last-child)
+        text-align: center
+        margin-right: 25px !important
+      .navbar-item
+        cursor: pointer
+        span
+          font-size: 1.25rem
+        .border-bottom:after
+          content: ""
+          position: absolute
+          transform: scale(0)
+          transition: transform 0.2s ease
+          left: 0px
+          right: 0px
+          bottom: 25%
+          z-index: 999
+          height: 3px
+          border-bottom-left-radius: 2px
+          border-bottom-right-radius: 2px
+          background-position: 0% 0%
+          background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6)
+          background-size: 500% auto
+          animation: gradient 3s linear infinite
+      .navbar-item:hover
+        .border-bottom:after
+          bottom: 25%
+          transform: scale(1)
