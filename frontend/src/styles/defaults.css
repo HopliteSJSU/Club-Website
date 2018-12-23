@@ -4532,7 +4532,7 @@ a.navbar-item,
   .navbar-link:hover,
   .navbar-link.is-active {
     background-color: rgba(0, 0, 0, 0);
-    color: #3273dc; }
+    color: white; }
 
 .navbar-item {
   display: block;
@@ -6746,6 +6746,22 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none; }
+
+::selection {
+  background-color: rgba(225, 115, 115, 0.5); }
+
 /* Import all your sass files from your components here */
 button.button {
   outline: none;
@@ -6822,6 +6838,7 @@ div.container#email-sub {
         background-size: 500% auto;
         animation: gradient 3s linear infinite; }
       div.container#email-sub div.container#input-container div.container.for-animation span.icon {
+        font-size: 1.5rem;
         color: white;
         position: absolute;
         top: 25%;
@@ -6841,17 +6858,16 @@ div.container#email-sub {
         height: 50px;
         border: none;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.5); }
+        background-color: rgba(0, 0, 0, 0.5);
+        text-decoration: none !important; }
         div.container#email-sub div.container#input-container div.container.for-animation input#email-input.mobile {
-          padding-top: 2px;
           padding-left: 14%;
           padding-right: 12%; }
         div.container#email-sub div.container#input-container div.container.for-animation input#email-input.desktop {
-          padding-top: 3px;
           padding-left: 9%;
           padding-right: 9%; }
         div.container#email-sub div.container#input-container div.container.for-animation input#email-input::placeholder {
-          color: rgba(255, 255, 255, 0.85);
+          color: rgba(255, 255, 255, 0.7);
           padding-left: 5px; }
         div.container#email-sub div.container#input-container div.container.for-animation input#email-input:focus {
           border: none;
@@ -6898,31 +6914,44 @@ header.navbar .container:nth-child(1) {
   padding-left: 5%;
   padding-right: 5%; }
 
-header.navbar .navbar-menu .navbar-end .navbar-item:not(:last-child) {
-  text-align: center;
-  margin-right: 25px !important; }
-
-header.navbar .navbar-menu .navbar-end .navbar-item {
-  cursor: pointer; }
-  header.navbar .navbar-menu .navbar-end .navbar-item span {
-    font-size: 1.25rem; }
-  header.navbar .navbar-menu .navbar-end .navbar-item .border-bottom:after {
-    content: "";
-    position: absolute;
-    transform: scale(0);
-    transition: transform 0.2s ease;
-    left: 0px;
-    right: 0px;
+header.navbar .navbar-menu {
+  background-color: rgba(0, 0, 0, 0) !important;
+  box-shadow: none !important; }
+  header.navbar .navbar-menu.is-active .navbar-end .navbar-item {
+    margin-left: auto !important;
+    margin-right: auto !important; }
+    header.navbar .navbar-menu.is-active .navbar-end .navbar-item.is-active .border-bottom:after {
+      bottom: 5% !important;
+      transform: scale(1) !important; }
+  header.navbar .navbar-menu .navbar-end .navbar-item {
+    cursor: pointer;
+    width: fit-content;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px; }
+    header.navbar .navbar-menu .navbar-end .navbar-item span {
+      font-size: 1.25rem; }
+    header.navbar .navbar-menu .navbar-end .navbar-item .border-bottom:after {
+      content: "";
+      position: absolute;
+      transform: scale(0);
+      transition: transform 0.2s ease;
+      left: 0px;
+      right: 0px;
+      bottom: 25%;
+      z-index: 999;
+      height: 3px;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+      background-position: 0% 0%;
+      background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+      background-size: 500% auto;
+      animation: gradient 3s linear infinite; }
+    header.navbar .navbar-menu .navbar-end .navbar-item.is-active {
+      font-weight: bold; }
+      header.navbar .navbar-menu .navbar-end .navbar-item.is-active .border-bottom:after {
+        bottom: 25%;
+        transform: scale(1); }
+  header.navbar .navbar-menu .navbar-end .navbar-item:hover .border-bottom:after {
     bottom: 25%;
-    z-index: 999;
-    height: 3px;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
-    background-position: 0% 0%;
-    background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
-    background-size: 500% auto;
-    animation: gradient 3s linear infinite; }
-
-header.navbar .navbar-menu .navbar-end .navbar-item:hover .border-bottom:after {
-  bottom: 25%;
-  transform: scale(1); }
+    transform: scale(1); }

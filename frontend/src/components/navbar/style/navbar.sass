@@ -4,12 +4,24 @@ header.navbar
     padding-left: 5%
     padding-right: 5%
   .navbar-menu
+    background-color: rgba(0,0,0,0) !important
+    box-shadow: none !important
+    &.is-active
+      .navbar-end
+        .navbar-item
+          margin-left: auto !important
+          margin-right: auto !important
+          &.is-active
+            .border-bottom:after
+              bottom: 5% !important
+              transform: scale(1) !important
     .navbar-end
-      .navbar-item:not(:last-child)
-        text-align: center
-        margin-right: 25px !important
       .navbar-item
         cursor: pointer
+        width: fit-content
+        text-align: center
+        margin-right: 10px
+        margin-left: 10px
         span
           font-size: 1.25rem
         .border-bottom:after
@@ -28,6 +40,11 @@ header.navbar
           background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6)
           background-size: 500% auto
           animation: gradient 3s linear infinite
+        &.is-active
+          font-weight: bold
+          .border-bottom:after
+            bottom: 25%
+            transform: scale(1)
       .navbar-item:hover
         .border-bottom:after
           bottom: 25%
