@@ -41,7 +41,6 @@ class HeroBanner extends Component {
     } = this.state;
 
     let deviceType = windowWidth <= 850 ? "mobile" : "desktop";
-    console.log(deviceType, windowWidth);
 
     return (
       <section className="hero is-fullheight">
