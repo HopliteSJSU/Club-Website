@@ -3,8 +3,11 @@ import React, { Component } from "react";
 import Navbar from "components/navbar/navbar";
 import EmailSubscribe from "components/email-sub/email-sub";
 
+import _ from "lodash";
+
 class HeroBanner extends Component {
   state = {
+    windowWidth: window.innerWidth,
     activeBurger: false,
     activeNavbarItem: "Home",
     navbarItems: [
@@ -17,6 +20,12 @@ class HeroBanner extends Component {
     ]
   };
 
+  componentDidMount() {
+    window.addEventListener("resize", _.debounce(this.updateWidth, 200));
+  }
+
+  updateWidth = () => this.setState({ windowWidth: window.innerWidth });
+
   handleBurgerClick = () =>
     this.setState(prevState => ({ activeBurger: !prevState.activeBurger }));
 
@@ -24,7 +33,15 @@ class HeroBanner extends Component {
     this.setState({ activeNavbarItem: e.currentTarget.textContent });
 
   render() {
-    const { activeBurger, activeNavbarItem, navbarItems } = this.state;
+    const {
+      activeBurger,
+      activeNavbarItem,
+      navbarItems,
+      windowWidth
+    } = this.state;
+
+    let deviceType = windowWidth <= 850 ? "mobile" : "desktop";
+    console.log(deviceType, windowWidth);
 
     return (
       <section className="hero is-fullheight">
@@ -44,11 +61,11 @@ class HeroBanner extends Component {
               <h1 className="title is-1">Hoplite</h1>
               <h2 className="subtitle is-2">Ace your coding interviews!</h2>
             </div>
-            <EmailSubscribe />
+            <EmailSubscribe deviceType={deviceType} />
           </div>
         </div>
 
-        <div className="hero-foot">
+        <div className={`hero-foot ${deviceType}`}>
           <div className="container">
             <div className="columns">
               <div className="column is-flex">Contact: hoplite@sjsu.edu</div>
