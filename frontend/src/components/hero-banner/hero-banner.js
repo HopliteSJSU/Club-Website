@@ -22,7 +22,13 @@ class HeroBanner extends Component {
 
   componentDidMount() {
     window.addEventListener("resize", _.debounce(this.updateWidth, 200));
+    // window.addEventListener("scroll", this.addParallax);
   }
+
+  addParallax = () => {
+    let offset = window.pageYOffset;
+    this.home.style.backgroundPositionY = offset * 0.9 + "px";
+  };
 
   updateWidth = () => this.setState({ windowWidth: window.innerWidth });
 
@@ -43,7 +49,11 @@ class HeroBanner extends Component {
     let deviceType = windowWidth <= 850 ? "mobile" : "desktop";
 
     return (
-      <section className="hero is-fullheight">
+      <section
+        className="hero is-fullheight"
+        id="home"
+        ref={node => (this.home = node)}
+      >
         <div className="hero-head">
           <Navbar
             isActive={activeBurger}

@@ -6885,8 +6885,7 @@ div.container#email-sub {
 section.hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(236, 111, 102, 0.5)), url("bg.jpg");
   background-size: cover;
-  background-position-x: 25%;
-  background-position-y: 25%; }
+  background-attachment: fixed; }
   section.hero .hero-body .container .container {
     margin: 0 0 3.5% 0; }
     section.hero .hero-body .container .container h1 {
@@ -6958,3 +6957,22 @@ header.navbar .navbar-menu {
   header.navbar .navbar-menu .navbar-end .navbar-item:hover .border-bottom:after {
     bottom: 25%;
     transform: scale(1); }
+
+#leadership .container {
+  padding-top: 3%;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom: 3%; }
+  #leadership .container h2.title {
+    font-size: 50px; }
+  #leadership .container h3.subtitle {
+    margin-top: 2%;
+    margin-bottom: 6%; }
+  #leadership .container .columns .column {
+    max-width: 277.72px;
+    margin: auto !important; }
+    #leadership .container .columns .column .card-content .media.media-content .title.is-4 {
+      width: fit-content !important;
+      margin-right: 5% !important; }
+    #leadership .container .columns .column .card-content .media.media-content .fa-linkedin:hover {
+      color: blue; }

@@ -3,8 +3,7 @@ import Button from "components/button/button";
 
 class EmailSub extends Component {
   state = {
-    showInput: false,
-    windowWidth: window.innerWidth
+    showInput: false
   };
 
   handleSubClick = () => {
@@ -13,7 +12,7 @@ class EmailSub extends Component {
   };
 
   render() {
-    const { showInput, windowWidth } = this.state;
+    const { showInput } = this.state;
     const { deviceType } = this.props;
 
     let isHidden = showInput ? "show" : "hide";
