@@ -1,15 +1,16 @@
 /* eslint jsx-a11y/anchor-is-valid: 0*/
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-const Navbar = ({ isActive, burgerClick }) => (
-  <header class="navbar">
-    <div class="container">
-      <div class="navbar-brand">
-        <a class="navbar-item">
+const Navbar = ({ isActive, burgerClick, itemClick, activeItem, items }) => (
+  <header className="navbar noselect">
+    <div className="container">
+      <div className="navbar-brand">
+        <a href="#Home" className="navbar-item">
           <h1 className="title has-text-white">Hoplite</h1>
         </a>
         <span
-          class={`navbar-burger burger ${isActive ? "is-active" : ""}`}
+          className={`navbar-burger burger ${isActive ? "is-active" : ""}`}
           onClick={burgerClick}
         >
           <span />
@@ -17,32 +18,21 @@ const Navbar = ({ isActive, burgerClick }) => (
           <span />
         </span>
       </div>
-      <div class={`navbar-menu ${isActive ? "is-active" : ""}`}>
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <span>Home</span>
-            <div class="border-bottom" />
-          </div>
-          <div class="navbar-item">
-            <span>About Us</span>
-            <div class="border-bottom" />
-          </div>
-          <div class="navbar-item">
-            <span>Leadership</span>
-            <div class="border-bottom" />
-          </div>
-          <div class="navbar-item">
-            <span>Projects</span>
-            <div class="border-bottom" />
-          </div>
-          <div class="navbar-item">
-            <span>Sponsors</span>
-            <div class="border-bottom" />
-          </div>
-          <div class="navbar-item">
-            <span>Apply to join</span>
-            <div class="border-bottom" />
-          </div>
+      <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>
+        <div className="navbar-end">
+          {items.map((item, i) => (
+            <NavLink
+              to={{ hash: `#${item.replace(/\s/g, "")}` }}
+              className={`navbar-item ${
+                activeItem === item ? "is-active" : ""
+              }`}
+              onClick={itemClick}
+              key={i}
+            >
+              <span>{item}</span>
+              <div className="border-bottom" />
+            </NavLink>
+          ))}
         </div>
       </div>
     </div>

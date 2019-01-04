@@ -1,8 +1,9 @@
 import React from 'react';
 
 const AboutUs = ({ styles }) => (
-    <div className="container" id="about-us">
-        <p>
+    <div style={ styles.container } className="hero" id="aboutus">
+        <p style={ styles.body } className="hero-body container">
+            <h2 style={ styles.title } className="title has-text-centered">About Us</h2>
             Established in 2018, <b>Hoplite</b> at San José State University 
             brings together Spartans with the common goal of acing technical 
             coding interviews. We curate challenging interview level questions 

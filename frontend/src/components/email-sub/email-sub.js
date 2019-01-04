@@ -1,22 +1,9 @@
 import React, { Component } from "react";
 import Button from "components/button/button";
 
-import _ from "lodash";
-
 class EmailSub extends Component {
   state = {
-    showInput: false,
-    windowWidth: window.innerWidth
-  };
-
-  componentDidMount() {
-    window.addEventListener("resize", _.debounce(this.updateMobileWidth, 200));
-  }
-
-  updateMobileWidth = () => {
-    if (this.state.showInput) {
-      this.setState({ windowWidth: window.innerWidth });
-    }
+    showInput: false
   };
 
   handleSubClick = () => {
@@ -25,20 +12,20 @@ class EmailSub extends Component {
   };
 
   render() {
-    const { showInput, windowWidth } = this.state;
+    const { showInput } = this.state;
+    const { deviceType } = this.props;
 
     let isHidden = showInput ? "show" : "hide";
-    let updateWidth = windowWidth <= 700 ? "mobile" : "desktop";
 
     return (
       <div className="container" id="email-sub">
         <div className="container" id="input-container">
           <div
-            className={`container for-animation ${isHidden} ${updateWidth}`}
+            className={`container for-animation ${isHidden} ${deviceType}`}
             ref={node => (this.inputContainer = node)}
           >
             <input
-              className={`input ${updateWidth}`}
+              className={`input ${deviceType}`}
               id="email-input"
               placeholder="What's your email?"
               type="email"

@@ -4532,7 +4532,7 @@ a.navbar-item,
   .navbar-link:hover,
   .navbar-link.is-active {
     background-color: rgba(0, 0, 0, 0);
-    color: #3273dc; }
+    color: white; }
 
 .navbar-item {
   display: block;
@@ -6746,6 +6746,22 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none; }
+
+::selection {
+  background-color: rgba(225, 115, 115, 0.5); }
+
 /* Import all your sass files from your components here */
 button.button {
   outline: none;
@@ -6804,7 +6820,7 @@ div.container#email-sub {
       div.container#email-sub div.container#input-container div.container.for-animation.show {
         opacity: 1; }
         div.container#email-sub div.container#input-container div.container.for-animation.show.mobile {
-          width: 70% !important; }
+          width: 80% !important; }
         div.container#email-sub div.container#input-container div.container.for-animation.show.desktop {
           width: 50% !important; }
       div.container#email-sub div.container#input-container div.container.for-animation:after {
@@ -6822,6 +6838,7 @@ div.container#email-sub {
         background-size: 500% auto;
         animation: gradient 3s linear infinite; }
       div.container#email-sub div.container#input-container div.container.for-animation span.icon {
+        font-size: 1.3rem;
         color: white;
         position: absolute;
         top: 25%;
@@ -6841,17 +6858,16 @@ div.container#email-sub {
         height: 50px;
         border: none;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.5); }
+        background-color: rgba(0, 0, 0, 0.5);
+        text-decoration: none !important; }
         div.container#email-sub div.container#input-container div.container.for-animation input#email-input.mobile {
-          padding-top: 2px;
           padding-left: 14%;
           padding-right: 12%; }
         div.container#email-sub div.container#input-container div.container.for-animation input#email-input.desktop {
-          padding-top: 3px;
           padding-left: 9%;
           padding-right: 9%; }
         div.container#email-sub div.container#input-container div.container.for-animation input#email-input::placeholder {
-          color: rgba(255, 255, 255, 0.85);
+          color: rgba(255, 255, 255, 0.7);
           padding-left: 5px; }
         div.container#email-sub div.container#input-container div.container.for-animation input#email-input:focus {
           border: none;
@@ -6869,8 +6885,7 @@ div.container#email-sub {
 section.hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(236, 111, 102, 0.5)), url("bg.jpg");
   background-size: cover;
-  background-position-x: 25%;
-  background-position-y: 25%; }
+  background-attachment: fixed; }
   section.hero .hero-body .container .container {
     margin: 0 0 3.5% 0; }
     section.hero .hero-body .container .container h1 {
@@ -6880,7 +6895,10 @@ section.hero {
   section.hero .hero-body .container .container:nth-child(2) {
     margin: 5% 0 5% 0; }
   section.hero .hero-foot {
-    height: 6rem; }
+    height: 6rem;
+    transition: margin-bottom 0.5s ease; }
+    section.hero .hero-foot.mobile {
+      margin-bottom: 5rem; }
     section.hero .hero-foot .container .columns .column {
       font-size: 1.35rem;
       color: white;
@@ -6898,31 +6916,63 @@ header.navbar .container:nth-child(1) {
   padding-left: 5%;
   padding-right: 5%; }
 
-header.navbar .navbar-menu .navbar-end .navbar-item:not(:last-child) {
-  text-align: center;
-  margin-right: 25px !important; }
-
-header.navbar .navbar-menu .navbar-end .navbar-item {
-  cursor: pointer; }
-  header.navbar .navbar-menu .navbar-end .navbar-item span {
-    font-size: 1.25rem; }
-  header.navbar .navbar-menu .navbar-end .navbar-item .border-bottom:after {
-    content: "";
-    position: absolute;
-    transform: scale(0);
-    transition: transform 0.2s ease;
-    left: 0px;
-    right: 0px;
+header.navbar .navbar-menu {
+  background-color: rgba(0, 0, 0, 0) !important;
+  box-shadow: none !important; }
+  header.navbar .navbar-menu.is-active .navbar-end .navbar-item {
+    margin-left: auto !important;
+    margin-right: auto !important; }
+    header.navbar .navbar-menu.is-active .navbar-end .navbar-item.is-active .border-bottom:after {
+      bottom: 5% !important;
+      transform: scale(1) !important; }
+  header.navbar .navbar-menu .navbar-end .navbar-item {
+    cursor: pointer;
+    width: fit-content;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px; }
+    header.navbar .navbar-menu .navbar-end .navbar-item span {
+      font-size: 1.25rem; }
+    header.navbar .navbar-menu .navbar-end .navbar-item .border-bottom:after {
+      content: "";
+      position: absolute;
+      transform: scale(0);
+      transition: transform 0.2s ease;
+      left: 0px;
+      right: 0px;
+      bottom: 25%;
+      z-index: 999;
+      height: 3px;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+      background-position: 0% 0%;
+      background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+      background-size: 500% auto;
+      animation: gradient 3s linear infinite; }
+    header.navbar .navbar-menu .navbar-end .navbar-item.is-active {
+      font-weight: bold; }
+      header.navbar .navbar-menu .navbar-end .navbar-item.is-active .border-bottom:after {
+        bottom: 25%;
+        transform: scale(1); }
+  header.navbar .navbar-menu .navbar-end .navbar-item:hover .border-bottom:after {
     bottom: 25%;
-    z-index: 999;
-    height: 3px;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
-    background-position: 0% 0%;
-    background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
-    background-size: 500% auto;
-    animation: gradient 3s linear infinite; }
+    transform: scale(1); }
 
-header.navbar .navbar-menu .navbar-end .navbar-item:hover .border-bottom:after {
-  bottom: 25%;
-  transform: scale(1); }
+#leadership .container {
+  padding-top: 3%;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom: 3%; }
+  #leadership .container h2.title {
+    font-size: 50px; }
+  #leadership .container h3.subtitle {
+    margin-top: 2%;
+    margin-bottom: 6%; }
+  #leadership .container .columns .column {
+    max-width: 277.72px;
+    margin: auto !important; }
+    #leadership .container .columns .column .card-content .media.media-content .title.is-4 {
+      width: fit-content !important;
+      margin-right: 5% !important; }
+    #leadership .container .columns .column .card-content .media.media-content .fa-linkedin:hover {
+      color: blue; }

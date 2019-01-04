@@ -11,15 +11,18 @@ $size-1: 6rem
 //Navbar defaults
 $navbar-item-color: white
 $navbar-item-active-color: white
-$navbar-item-hover-color: hsl(217, 71%, 53%)
+$navbar-item-hover-color: white
 $navbar-item-hover-background-color: rgba(0,0,0,0)
 $navbar-height: 6rem
 
+
 @import "node_modules/bulma/bulma.sass"
 ////////////////////////////////////////////////////////////////////////////////
+@import "globals.sass"
 
 /* Import all your sass files from your components here */
 @import "components/button/style/button.sass"
 @import "components/email-sub/style/email-sub.sass"
 @import "components/hero-banner/style/hero-banner.sass"
-@import "components/navbar/style/navbar"
+@import "components/navbar/style/navbar.sass"
+@import "components/leadership/style/leadership.sass"
