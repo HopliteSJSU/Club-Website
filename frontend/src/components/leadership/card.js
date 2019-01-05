@@ -1,57 +1,68 @@
 import React from "react";
-import uuid from "uuid/v1";
+import _ from "lodash";
 
 class Card extends React.Component {
   state = {
-    hover: false
+    hover: false,
+    flipped: false
   };
 
   handleIconEnter = () => this.setState({ hover: true });
   handleIconLeave = () => this.setState({ hover: false });
   handleIconClick = () => window.open(this.props.linkedin, "linkedin");
+  handleCardFlipClick = () => this.setState({ flipped: true });
+  handleCardFlipMouseLeave = () => this.setState({ flipped: false });
 
   render() {
     const { img, name, role } = this.props;
-    const { hover } = this.state;
+    const { flipped } = this.state;
 
     return (
-      <div className="column">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img alt={name} src={img} width="100%" />
+      <div
+        className="column"
+        onMouseEnter={_.debounce(this.handleCardFlipClick, 400)}
+        onMouseLeave={_.debounce(this.handleCardFlipMouseLeave, 500)}
+      >
+        <div className={`card ${flipped ? "back" : "front"}`}>
+          <div className="card-image noselect">
+            <figure className="image is-4by3">
+              <img alt={name} src={img} width="100%" draggable="false" />
             </figure>
           </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-content" key={hover ? uuid() : "media"}>
-                <p class="title is-5 is-inline">{name}</p>
-                <span
-                  className="icon"
-                  onMouseEnter={this.handleIconEnter}
-                  onMouseLeave={this.handleIconLeave}
-                  onClick={this.handleIconClick}
-                  title={`${name}'s LinkedIn Profile`}
-                  style={{ position: "absolute", right: "8%" }}
-                >
-                  <i
-                    className="fab fa-linkedin"
-                    style={{
-                      float: "right",
-                      fontSize: "2rem",
-                      color: hover ? "blue" : "",
-                      cursor: "pointer"
-                    }}
-                  />
-                </span>
-                <p class="subtitle is-6">{role}</p>
+          <div className="card-content">
+            <div className="media">
+              <div className="media-content">
+                <p className="title is-5 has-text-centered">{name}</p>
+                <p className="subtitle is-6 has-text-centered">{role}</p>
               </div>
             </div>
+          </div>
+          <div id="card-back">
+            <p>HELLO MY NAME IS PHILLIP ROGNERUD AND THIS IS MY AWESOME CARD</p>
           </div>
         </div>
       </div>
     );
   }
 }
+
+// <span
+//   className="icon"
+//   onMouseEnter={this.handleIconEnter}
+//   onMouseLeave={this.handleIconLeave}
+//   onClick={this.handleIconClick}
+//   title={`${name}'s LinkedIn Profile`}
+//   style={{ position: "absolute", right: "8%" }}
+// >
+//   <i
+//     className="fab fa-linkedin"
+//     style={{
+//       float: "right",
+//       fontSize: "2rem",
+//       color: hover ? "blue" : "",
+//       cursor: "pointer"
+//     }}
+//   />
+// </span>
 
 export default Card;

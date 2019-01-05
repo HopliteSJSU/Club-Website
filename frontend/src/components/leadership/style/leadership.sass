@@ -1,22 +1,51 @@
 #leadership
   .container
-    padding-top: 3%
-    padding-left: 7%
-    padding-right: 7%
-    padding-bottom: 3%
-    h2.title
-      font-size: 50px
-    h3.subtitle
-      margin-top: 2%
-      margin-bottom: 6%
     .columns
       .column
         max-width: 277.72px
         margin: auto !important
-        .card-content
-          .media.media-content
-            .title.is-4
-              width: fit-content !important
-              margin-right: 5% !important
-            .fa-linkedin:hover
-              color: blue
+        .card
+          transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1), transform 0.5s ease
+          box-shadow: 0 2px 2px rgba(0,0,0,0.19), 0 2px 2px rgba(0,0,0,0.23)
+          cursor: pointer
+          border-radius: 5px
+          .card-content
+            padding: 1rem !important
+            .media.media-content
+              .title.is-4
+                width: fit-content !important
+                margin-right: 5% !important
+              .fa-linkedin:hover
+                color: blue
+          .card-image
+            .image
+              img
+                border-top-left-radius: 5px !important
+                border-top-right-radius: 5px !important
+          &.front
+            opacity: 1
+            .card-content
+              transition: opacity 0.3s ease
+              opacity: 1
+            .card-image
+              transition: opacity 0.3s ease
+              opacity: 1
+            #card-back
+              display: none
+              opacity: 0
+              transition: opacity 0.3s ease
+              position: absolute
+          &.back
+            box-shadow: 0 2px 2px rgba(0,0,0,0.19), 0 2px 2px rgba(0,0,0,0.23)
+            transform: translate(0px, -3px) scale(1.03)
+            transform: rotateY(180deg)
+            #card-back
+              opacity: 1
+              transform: rotateY(-180deg)
+              position: absolute
+              top: 8%
+              right: 10%
+            .card-content
+              opacity: 0
+            .card-image
+              opacity: 0

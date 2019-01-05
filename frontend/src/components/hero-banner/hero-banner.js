@@ -77,7 +77,9 @@ class HeroBanner extends Component {
         <div className={`hero-foot ${deviceType}`}>
           <div className="container">
             <div className="columns">
-              <div className="column is-flex">Contact: hoplite@sjsu.edu</div>
+              <div className="column is-flex">
+                Contact: hopliteclub@gmail.com
+              </div>
               <div className="column is-flex">7:30pm Thursday @ DMH 356</div>
               <div className="column is-flex">
                 Follow us on
