@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import HeroBanner from "components/hero-banner/hero-banner";
+import AboutUs from "components/about-us/about-us";
 import Leadership from "components/leadership/leadership";
 import Calendar from "components/calendar/calendar";
 
@@ -31,6 +32,7 @@ class FrontPage extends Component {
     return (
       <React.Fragment>
         <HeroBanner />
+        <AboutUs />
         <Calendar />
         <Leadership />
       </React.Fragment>
