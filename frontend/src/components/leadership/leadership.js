@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Card from "./card";
 import leaders from "./leaders";
 
+import uuid from "uuid/v1";
+
 class Leadership extends Component {
   render() {
     let columns = [];
@@ -12,15 +14,20 @@ class Leadership extends Component {
         row = [];
       }
 
-      console.log(row);
-      row.push(<Card name={name} role={role} img={img} linkedin={linkedin} />);
+      row.push(
+        <Card
+          name={name}
+          role={role}
+          img={img}
+          linkedin={linkedin}
+          key={uuid()}
+        />
+      );
 
       if (index === leaders.length - 1) {
         columns.push(row);
       }
     });
-
-    console.log(columns);
 
     return (
       <section id="leadership">
@@ -30,8 +37,10 @@ class Leadership extends Component {
             Meet our <strong>awesome</strong> leadership team that focus on all
             aspects of Hoplite!
           </h3>
-          {columns.map(column => (
-            <div className="columns">{column}</div>
+          {columns.map((column, index) => (
+            <div className="columns" key={index}>
+              {column}
+            </div>
           ))}
         </div>
       </section>
