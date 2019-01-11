@@ -14,3 +14,28 @@
 
 ::selection
   background-color: rgba(225,115,115,0.5)
+
+
+section:not(#home)
+  .container:first-child
+    &:not(.mobile)
+      padding-top: 3%
+      padding-left: 7%
+      padding-right: 7%
+      padding-bottom: 4.5%
+      h2.title
+        font-size: 50px !important
+      h3.subtitle
+        margin-top: 1%
+        margin-bottom: 5%
+    &.mobile
+      padding-top: 20%
+      padding-left: 7%
+      padding-right: 7%
+      padding-bottom: 20%
+      h2.title
+        font-size: 50px !important
+        margin-bottom: 10%
+      h3.subtitle
+        margin-top: 5%
+        margin-bottom: 15%

@@ -1,6 +1,12 @@
 /* eslint jsx-a11y/anchor-is-valid: 0*/
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Button from "components/button/button";
+
+const clicked = () => {
+  window.location.href =
+    "https://docs.google.com/forms/u/2/d/1vT5bP42waOwcxa6DIl9dQi7VE15psoT6JlCdHThw7OE";
+};
 
 const Navbar = ({ isActive, burgerClick, itemClick, activeItem, items }) => (
   <header className="navbar noselect">
@@ -19,7 +25,7 @@ const Navbar = ({ isActive, burgerClick, itemClick, activeItem, items }) => (
         </span>
       </div>
       <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>
-        <div className="navbar-end">
+        <div className="navbar-start">
           {items.map((item, i) => (
             <NavLink
               to={{ hash: `#${item.replace(/\s/g, "")}` }}
@@ -33,6 +39,9 @@ const Navbar = ({ isActive, burgerClick, itemClick, activeItem, items }) => (
               <div className="border-bottom" />
             </NavLink>
           ))}
+        </div>
+        <div className="navbar-end">
+          <Button label="Apply" clicked={clicked} />
         </div>
       </div>
     </div>

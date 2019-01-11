@@ -10,14 +10,7 @@ class HeroBanner extends Component {
     windowWidth: window.innerWidth,
     activeBurger: false,
     activeNavbarItem: "Home",
-    navbarItems: [
-      "Home",
-      "About Us",
-      "Leadership",
-      "Projects",
-      "Sponsors",
-      "Apply"
-    ]
+    navbarItems: ["Home", "About Us", "Leadership", "Projects", "Sponsors"]
   };
 
   componentDidMount() {
@@ -77,16 +70,12 @@ class HeroBanner extends Component {
         <div className={`hero-foot ${deviceType}`}>
           <div className="container">
             <div className="columns">
-              <div className="column is-flex">
-                Contact: hopliteclub@gmail.com
+              <div className="column is-flex" />
+              <div className="column is-flex has-text-centered">
+                MEETING TIMES: <br />
+                7:30pm Thursday @ MQH 234 <br /> 10:00am Friday @ TBD
               </div>
-              <div className="column is-flex">7:30pm Thursday @ DMH 356</div>
-              <div className="column is-flex">
-                Follow us on
-                <a href="https://www.linkedin.com/company/sjsu-hoplite/">
-                  LinkedIn!
-                </a>
-              </div>
+              <div className="column is-flex" />
             </div>
           </div>
         </div>

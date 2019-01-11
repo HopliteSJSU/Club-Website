@@ -1,23 +1,52 @@
-import React from 'react';
+import React from "react";
+
+import "./style/aboutus.css";
 
 const AboutUs = ({ styles }) => (
-    <div style={ styles.container } className="hero" id="aboutus">
-        <p style={ styles.body } className="hero-body container">
-            <h2 style={ styles.title } className="title has-text-centered">About Us</h2>
-            Established in 2018, <b>Hoplite</b> at San José State University 
-            brings together Spartans with the common goal of acing technical 
-            coding interviews. We curate challenging interview level questions 
-            and mimic resources available during interviews to help members gain 
-            confidence and experience. We analyze problems and demonstrate practical 
-            techniques and methodologies that can be used during real interviews. We 
-            are growth focused and emphasize collaboration and knowledge sharing to 
-            strengthen our group and individual members.
-        </p>
-    </div>
-);
+  <section id="aboutus">
+    <div className="container">
+      <h2 className="title has-text-centered">About Us</h2>
+      <h3 className="subtitle has-text-centered">Who Are We?</h3>
 
-AboutUs.defaultProps = {
-    styles: {}
-};
+      <div className="content">
+        Established in 2018, <b>Hoplite</b> at San José State University brings
+        together Spartans with the common goal of acing technical coding
+        interviews. We curate challenging interview level questions and mimic
+        resources available during interviews to help members gain confidence
+        and experience. We analyze problems and demonstrate practical techniques
+        and methodologies that can be used during real interviews. We are growth
+        focused and emphasize collaboration and knowledge sharing to strengthen
+        our group and individual members.
+      </div>
+
+      <div className="content">
+        <div className="columns">
+          <div className="column">
+            <h5 className="subtitle has-text-left">What We Do.</h5>
+            <ul>
+              <li>Practice coding challenges and discuss solutions</li>
+              <li>Host inudstry leading tech companies</li>
+              <li>1-1 mock-interview sessions</li>
+              <li>Team-based projects</li>
+              <li>Share internship and interview knowledge</li>
+            </ul>
+          </div>
+          <div className="column">
+            <h5 className="subtitle has-text-left">Why Join?</h5>
+            <ul>
+              <li>Priority access to industry events</li>
+              <li>Gain access to shared industry contacts</li>
+              <li>
+                Exposure to verified interview problems and techniques to solve
+                them
+              </li>
+              <li>Experienced community</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
 
 export default AboutUs;

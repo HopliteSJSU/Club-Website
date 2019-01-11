@@ -9,7 +9,7 @@ class Leadership extends Component {
     let columns = [];
     let row = [];
     leaders.forEach(({ name, role, img, linkedin }, index) => {
-      if (index && index % 4 === 0) {
+      if (index && index % 3 === 0) {
         columns.push(row);
         row = [];
       }

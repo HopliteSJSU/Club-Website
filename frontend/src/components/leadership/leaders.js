@@ -16,7 +16,14 @@ const leaders = [
     name: "Carl Shefcik",
     role: "Treasurer",
     img:
-      "https://s3-us-west-1.amazonaws.com/hoplite-team-photos/Phillip_Rognerud.png",
+      "https://s3-us-west-1.amazonaws.com/hoplite-team-photos/Carl_Shefcik.png",
+    linkedin: "https://www.linkedin.com/in/carl-shefcik/"
+  },
+  {
+    name: "Natasha Baltazar",
+    role: "Operations",
+    img:
+      "https://s3-us-west-1.amazonaws.com/hoplite-team-photos/Natasha_Baltazar.png",
     linkedin: "https://www.linkedin.com/in/carl-shefcik/"
   },
   {
@@ -32,27 +39,6 @@ const leaders = [
     img:
       "https://s3-us-west-1.amazonaws.com/hoplite-team-photos/Saurabh_Mithe.png",
     linkedin: "https://www.linkedin.com/in/saurabhmithe/"
-  },
-  {
-    name: "Jonathan Wong",
-    role: "Project Lead",
-    img:
-      "https://s3-us-west-1.amazonaws.com/hoplite-team-photos/Phillip_Rognerud.png",
-    linkedin: "https://www.linkedin.com/in/jonathanchiwong/"
-  },
-  {
-    name: "Nhat Trinh",
-    role: "Project Lead",
-    img:
-      "https://s3-us-west-1.amazonaws.com/hoplite-team-photos/Phillip_Rognerud.png",
-    linkedin: "https://www.linkedin.com/in/nhat-trinh/"
-  },
-  {
-    name: "Nhat Trinh",
-    role: "Project Lead",
-    img:
-      "https://s3-us-west-1.amazonaws.com/hoplite-team-photos/Phillip_Rognerud.png",
-    linkedin: "https://www.linkedin.com/in/nhat-trinh/"
   }
 ];
 

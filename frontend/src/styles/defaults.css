@@ -6762,6 +6762,29 @@ label.panel-block {
 ::selection {
   background-color: rgba(225, 115, 115, 0.5); }
 
+section:not(#home) .container:first-child:not(.mobile) {
+  padding-top: 3%;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom: 4.5%; }
+  section:not(#home) .container:first-child:not(.mobile) h2.title {
+    font-size: 50px !important; }
+  section:not(#home) .container:first-child:not(.mobile) h3.subtitle {
+    margin-top: 1%;
+    margin-bottom: 5%; }
+
+section:not(#home) .container:first-child.mobile {
+  padding-top: 20%;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom: 20%; }
+  section:not(#home) .container:first-child.mobile h2.title {
+    font-size: 50px !important;
+    margin-bottom: 10%; }
+  section:not(#home) .container:first-child.mobile h3.subtitle {
+    margin-top: 5%;
+    margin-bottom: 15%; }
+
 /* Import all your sass files from your components here */
 button.button {
   outline: none;
@@ -6770,7 +6793,7 @@ button.button {
   color: white !important;
   min-width: 200px;
   min-height: 50px;
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  background: linear-gradient(to right, #ff8a00, #da1b60);
   transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.2s ease;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   border-radius: 4px !important;
@@ -6780,12 +6803,12 @@ button.button {
     display: inline-block;
     transition: all 0.5s; }
   button.button#animated-btn:before {
-    content: "Let's Go!";
+    content: "\"Hello World.\"";
     position: absolute;
     left: -100%;
     transition: all 0.5s; }
   button.button#animated-btn:hover:before {
-    left: 36%; }
+    left: 23%; }
   button.button#animated-btn:hover {
     border: 2px solid white;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -6803,7 +6826,10 @@ button.button:focus {
 div.container#email-sub {
   display: inline-flex;
   justify-content: center;
-  width: 100%; }
+  width: 100%;
+  transition: margin-top 0.3s ease; }
+  div.container#email-sub.mobile {
+    margin-top: 20% !important; }
   div.container#email-sub div.container#input-container {
     margin: 0px !important;
     display: inline-flex;
@@ -6820,7 +6846,7 @@ div.container#email-sub {
       div.container#email-sub div.container#input-container div.container.for-animation.show {
         opacity: 1; }
         div.container#email-sub div.container#input-container div.container.for-animation.show.mobile {
-          width: 80% !important; }
+          width: 95% !important; }
         div.container#email-sub div.container#input-container div.container.for-animation.show.desktop {
           width: 50% !important; }
       div.container#email-sub div.container#input-container div.container.for-animation:after {
@@ -6893,23 +6919,19 @@ section.hero {
     section.hero .hero-body .container .container h2 {
       color: white; }
   section.hero .hero-body .container .container:nth-child(2) {
-    margin: 5% 0 5% 0; }
-  section.hero .hero-foot {
-    height: 6rem;
-    transition: margin-bottom 0.5s ease; }
-    section.hero .hero-foot.mobile {
-      margin-bottom: 5rem; }
-    section.hero .hero-foot .container .columns .column {
-      font-size: 1.35rem;
-      color: white;
-      justify-content: center; }
-      section.hero .hero-foot .container .columns .column a {
-        font-weight: bold;
-        padding-left: 7px;
-        text-shadow: 1px 2px 1px black; }
-      section.hero .hero-foot .container .columns .column a:hover {
-        color: unset;
-        text-decoration: underline; }
+    margin: 5% 0 3% 0; }
+  section.hero .hero-foot .container .columns .column {
+    font-size: 1.75rem;
+    color: white;
+    justify-content: center;
+    margin-bottom: 3rem; }
+    section.hero .hero-foot .container .columns .column a {
+      font-weight: bold;
+      padding-left: 7px;
+      text-shadow: 1px 2px 1px black; }
+    section.hero .hero-foot .container .columns .column a:hover {
+      color: unset;
+      text-decoration: underline; }
 
 header.navbar .container:nth-child(1) {
   max-width: 1650px;
@@ -6919,107 +6941,101 @@ header.navbar .container:nth-child(1) {
 header.navbar .navbar-menu {
   background-color: rgba(0, 0, 0, 0) !important;
   box-shadow: none !important; }
-  header.navbar .navbar-menu.is-active .navbar-end .navbar-item {
+  header.navbar .navbar-menu.is-active .navbar-start .navbar-item {
     margin-left: auto !important;
     margin-right: auto !important; }
-    header.navbar .navbar-menu.is-active .navbar-end .navbar-item.is-active .border-bottom:after {
+    header.navbar .navbar-menu.is-active .navbar-start .navbar-item.is-active .border-bottom:after {
       bottom: 5% !important;
       transform: scale(1) !important; }
-  header.navbar .navbar-menu .navbar-end .navbar-item {
-    cursor: pointer;
-    width: fit-content;
-    text-align: center;
-    margin-right: 10px;
-    margin-left: 10px; }
-    header.navbar .navbar-menu .navbar-end .navbar-item span {
-      font-size: 1.25rem; }
-    header.navbar .navbar-menu .navbar-end .navbar-item .border-bottom:after {
-      content: "";
-      position: absolute;
-      transform: scale(0);
-      transition: transform 0.2s ease;
-      left: 0px;
-      right: 0px;
-      bottom: 25%;
-      z-index: 999;
-      height: 3px;
-      border-bottom-left-radius: 2px;
-      border-bottom-right-radius: 2px;
-      background-position: 0% 0%;
-      background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
-      background-size: 500% auto;
-      animation: gradient 3s linear infinite; }
-    header.navbar .navbar-menu .navbar-end .navbar-item.is-active {
-      font-weight: bold; }
-      header.navbar .navbar-menu .navbar-end .navbar-item.is-active .border-bottom:after {
-        bottom: 25%;
-        transform: scale(1); }
-  header.navbar .navbar-menu .navbar-end .navbar-item:hover .border-bottom:after {
-    bottom: 25%;
-    transform: scale(1); }
-
-#leadership .container .columns .column {
-  max-width: 277.72px;
-  margin: auto !important; }
-  #leadership .container .columns .column .card {
-    transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.5s ease;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
-    cursor: pointer;
-    border-radius: 5px; }
-    #leadership .container .columns .column .card .card-content {
-      padding: 1rem !important; }
-      #leadership .container .columns .column .card .card-content .media.media-content .title.is-4 {
-        width: fit-content !important;
-        margin-right: 5% !important; }
-      #leadership .container .columns .column .card .card-content .media.media-content .fa-linkedin:hover {
-        color: blue; }
-    #leadership .container .columns .column .card .card-image .image img {
-      border-top-left-radius: 5px !important;
-      border-top-right-radius: 5px !important; }
-    #leadership .container .columns .column .card.front {
-      opacity: 1; }
-      #leadership .container .columns .column .card.front .card-content {
-        transition: opacity 0.3s ease;
-        opacity: 1; }
-      #leadership .container .columns .column .card.front .card-image {
-        transition: opacity 0.3s ease;
-        opacity: 1; }
-      #leadership .container .columns .column .card.front #card-back {
-        display: none;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        position: absolute; }
-    #leadership .container .columns .column .card.back {
-      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
-      transform: translate(0px, -3px) scale(1.03);
-      transform: rotateY(180deg); }
-      #leadership .container .columns .column .card.back #card-back {
-        opacity: 1;
-        transform: rotateY(-180deg);
+  header.navbar .navbar-menu.is-active .navbar-end {
+    justify-content: center;
+    flex-direction: column;
+    display: flex; }
+  header.navbar .navbar-menu .navbar-end {
+    margin-left: 0px !important;
+    justify-content: center;
+    flex-direction: column; }
+    header.navbar .navbar-menu .navbar-end .button {
+      min-width: 125px;
+      min-height: 40px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.2s ease; }
+      header.navbar .navbar-menu .navbar-end .button:hover {
+        border-color: white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        transform: translate(0px, 2px) scale(1.03); }
+  header.navbar .navbar-menu .navbar-start {
+    margin-left: auto !important;
+    margin-right: auto !important; }
+    header.navbar .navbar-menu .navbar-start .navbar-item {
+      cursor: pointer;
+      width: fit-content;
+      text-align: center;
+      margin-right: 10px;
+      margin-left: 10px; }
+      header.navbar .navbar-menu .navbar-start .navbar-item span {
+        font-size: 1.25rem; }
+      header.navbar .navbar-menu .navbar-start .navbar-item .border-bottom:after {
+        content: "";
         position: absolute;
-        top: 8%;
-        right: 10%; }
-      #leadership .container .columns .column .card.back .card-content {
-        opacity: 0; }
-      #leadership .container .columns .column .card.back .card-image {
-        opacity: 0; }
+        transform: scale(0);
+        transition: transform 0.2s ease;
+        left: 0px;
+        right: 0px;
+        bottom: 25%;
+        z-index: 999;
+        height: 3px;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+        background-position: 0% 0%;
+        background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+        background-size: 500% auto;
+        animation: gradient 3s linear infinite; }
+      header.navbar .navbar-menu .navbar-start .navbar-item.is-active {
+        font-weight: bold; }
+        header.navbar .navbar-menu .navbar-start .navbar-item.is-active .border-bottom:after {
+          bottom: 25%;
+          transform: scale(1); }
+    header.navbar .navbar-menu .navbar-start .navbar-item:hover .border-bottom:after {
+      bottom: 25%;
+      transform: scale(1); }
+
+#leadership .container {
+  padding-left: 12% !important;
+  padding-right: 12% !important; }
+  #leadership .container .columns {
+    margin-top: 1.5rem; }
+    #leadership .container .columns .column {
+      max-width: 277.72px;
+      margin: auto !important; }
+      #leadership .container .columns .column .card {
+        transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.5s ease;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
+        cursor: pointer;
+        border-radius: 5px; }
+        #leadership .container .columns .column .card .card-content {
+          padding: 1rem !important; }
+          #leadership .container .columns .column .card .card-content .media.media-content .title.is-4 {
+            width: fit-content !important;
+            margin-right: 5% !important; }
+          #leadership .container .columns .column .card .card-content .media.media-content .fa-linkedin:hover {
+            color: blue; }
+        #leadership .container .columns .column .card .card-image .image img {
+          border-top-left-radius: 5px !important;
+          border-top-right-radius: 5px !important; }
 
 #calendar {
-  background: linear-gradient(135deg, #6e8efb, #a777e3) !important; }
+  background: linear-gradient(to right, rgba(255, 138, 0, 0.5), rgba(218, 27, 96, 0.5)), url("bg.jpg");
+  background-size: cover;
+  background-attachment: fixed; }
   #calendar .container.is-flex {
-    width: fit-content; }
-    #calendar .container.is-flex .container {
-      justify-content: center; }
+    width: 100% !important;
+    justify-content: center !important; }
+    #calendar .container.is-flex iframe {
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7); }
 
-section:not(#home) .container:first-child {
-  padding-top: 3%;
-  padding-left: 7%;
-  padding-right: 7%;
-  padding-bottom: 4.5%; }
-
-section:not(#home) h2.title {
-  font-size: 50px !important; }
-
-section:not(#home) h3.subtitle {
-  margin-top: 1%;
-  margin-bottom: 3%; }
+#aboutus .container {
+  font-size: 1.15rem; }
+  #aboutus .container div.content {
+    margin-left: 15%;
+    margin-right: 8%; }

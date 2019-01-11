@@ -18,7 +18,7 @@ class EmailSub extends Component {
     let isHidden = showInput ? "show" : "hide";
 
     return (
-      <div className="container" id="email-sub">
+      <div className={`container ${deviceType}`} id="email-sub">
         <div className="container" id="input-container">
           <div
             className={`container for-animation ${isHidden} ${deviceType}`}
