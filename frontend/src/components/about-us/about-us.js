@@ -6,7 +6,7 @@ const AboutUs = ({ styles }) => (
   <section id="aboutus">
     <div className="container">
       <h2 className="title has-text-centered">About Us</h2>
-      <h3 className="subtitle has-text-centered">Who Are We?</h3>
+      <h3 className="subtitle has-text-centered">SJSU Hoplite</h3>
 
       <div className="content">
         Established in 2018, <b>Hoplite</b> at San José State University brings
@@ -41,6 +41,7 @@ const AboutUs = ({ styles }) => (
                 them
               </li>
               <li>Experienced community</li>
+              <li>That sweet Hoplite merch</li>
             </ul>
           </div>
         </div>

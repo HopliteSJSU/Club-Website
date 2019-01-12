@@ -28,10 +28,11 @@ class Calendar extends Component {
               <iframe
                 src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=c9umttrjh8lh95rot8fs7nd0nk%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FLos_Angeles"
                 style={{ border: 0 }}
-                width="1000"
-                height="600"
-                frameborder="0"
+                width="1200"
+                height="700"
+                frameBorder="0"
                 scrolling="no"
+                title="Hoplite Calendar"
               />
             ) : (
               <Button label="Go To Calendar" clicked={this.handleSubClick} />

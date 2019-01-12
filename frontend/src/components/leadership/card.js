@@ -5,7 +5,6 @@ class Card extends React.Component {
 
   render() {
     const { img, name, role } = this.props;
-    const { flipped } = this.state;
 
     return (
       <div className="column">

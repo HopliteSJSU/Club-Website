@@ -6874,9 +6874,12 @@ div.container#email-sub {
           opacity: 0; }
         div.container#email-sub div.container#input-container div.container.for-animation span.icon.show {
           opacity: 1; }
-      div.container#email-sub div.container#input-container div.container.for-animation span.icon:nth-child(2) {
+      div.container#email-sub div.container#input-container div.container.for-animation #arrow-submit {
+        cursor: pointer;
         right: 3%; }
-      div.container#email-sub div.container#input-container div.container.for-animation span.icon:nth-child(3) {
+        div.container#email-sub div.container#input-container div.container.for-animation #arrow-submit:hover {
+          color: #3273dc; }
+      div.container#email-sub div.container#input-container div.container.for-animation #email-icon {
         left: 3%; }
       div.container#email-sub div.container#input-container div.container.for-animation input#email-input {
         font-size: 1.10rem;
@@ -6901,6 +6904,26 @@ div.container#email-sub {
           box-shadow: none;
           background-color: rgba(0, 0, 0, 0.5);
           color: white; }
+
+div.container.for-animation.invalid-email:after {
+  height: 0px !important;
+  z-index: -99 !important; }
+
+div.container.for-animation.invalid-email .input:focus {
+  border: 2px solid rgba(255, 255, 0, 0.8) !important; }
+
+div.container.for-animation.invalid-email #email-icon {
+  color: #ffdd57 !important; }
+
+div.container.for-animation.error-email:after {
+  height: 0px !important;
+  z-index: -99 !important; }
+
+div.container.for-animation.error-email .input:focus {
+  border: 2px solid rgba(255, 0, 0, 0.8) !important; }
+
+div.container.for-animation.error-email #email-icon {
+  color: #ff3860 !important; }
 
 @keyframes gradient {
   0% {

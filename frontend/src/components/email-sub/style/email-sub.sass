@@ -51,9 +51,12 @@ div.container#email-sub
           opacity: 0
         &.show
           opacity: 1
-      span.icon:nth-child(2)
+      #arrow-submit
+        cursor: pointer
         right: 3%
-      span.icon:nth-child(3)
+        &:hover
+          color: $blue
+      #email-icon
         left: 3%
       input#email-input
         font-size: 1.10rem
@@ -78,6 +81,26 @@ div.container#email-sub
           box-shadow: none
           background-color: $input-background
           color: white
+
+div.container.for-animation
+    &.invalid-email
+      &:after
+        height: 0px !important
+        z-index: -99 !important
+      .input:focus
+        border: 2px solid rgba(255,255,0,0.8) !important
+      #email-icon
+        color: $yellow !important
+
+    &.error-email
+      &:after
+        height: 0px !important
+        z-index: -99 !important
+      .input:focus
+        border: 2px solid rgba(255,0,0,0.8) !important
+      #email-icon
+        color: $red !important
+
 
 
 @keyframes gradient

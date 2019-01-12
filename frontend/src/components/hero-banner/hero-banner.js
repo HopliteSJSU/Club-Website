@@ -10,7 +10,7 @@ class HeroBanner extends Component {
     windowWidth: window.innerWidth,
     activeBurger: false,
     activeNavbarItem: "Home",
-    navbarItems: ["Home", "About Us", "Leadership", "Projects", "Sponsors"]
+    navbarItems: ["Home", "About Us", "Calendar", "Leadership", "Projects"]
   };
 
   componentDidMount() {
