@@ -4,15 +4,25 @@ import HeroBanner from "components/hero-banner/hero-banner";
 import AboutUs from "components/about-us/about-us";
 import Leadership from "components/leadership/leadership";
 import Calendar from "components/calendar/calendar";
+import Footer from "components/footer/footer";
+
+import _ from "lodash";
 
 class FrontPage extends Component {
+  state = {
+    windowWidth: window.innerWidth
+  };
+
   componentDidMount() {
+    window.addEventListener("resize", _.debounce(this.updateWidth, 200));
     this.HashLink();
   }
 
   componentDidUpdate() {
     this.HashLink();
   }
+
+  updateWidth = () => this.setState({ windowWidth: window.innerWidth });
 
   HashLink = () => {
     let hash = window.location.hash.replace("#", "").toLowerCase();
@@ -29,12 +39,15 @@ class FrontPage extends Component {
   };
 
   render() {
+    const { windowWidth } = this.state;
+
     return (
       <React.Fragment>
-        <HeroBanner />
-        <AboutUs />
-        <Calendar />
-        <Leadership />
+        <HeroBanner windowWidth={windowWidth} />
+        <AboutUs windowWidth={windowWidth} />
+        <Calendar windowWidth={windowWidth} />
+        <Leadership windowWidth={windowWidth} />
+        <Footer />
       </React.Fragment>
     );
   }

@@ -3,16 +3,13 @@ import React, { Component } from "react";
 import Button from "components/button/button";
 
 class Calendar extends Component {
-  state = {
-    windowWidth: window.innerWidth
-  };
-
   handleBtnClick = () => {
-    console.log("helllo world");
+    window.location.href =
+      "https://calendar.google.com/calendar/r?cid=c9umttrjh8lh95rot8fs7nd0nk@group.calendar.google.com";
   };
 
   render() {
-    const { windowWidth } = this.state;
+    const { windowWidth } = this.props;
 
     let deviceType = windowWidth <= 850 ? "mobile" : "desktop";
 
@@ -35,7 +32,7 @@ class Calendar extends Component {
                 title="Hoplite Calendar"
               />
             ) : (
-              <Button label="Go To Calendar" clicked={this.handleSubClick} />
+              <Button label="Go To Calendar" clicked={this.handleBtnClick} />
             )}
           </div>
         </div>

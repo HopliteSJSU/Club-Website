@@ -3,18 +3,14 @@ import React, { Component } from "react";
 import Navbar from "components/navbar/navbar";
 import EmailSubscribe from "components/email-sub/email-sub";
 
-import _ from "lodash";
-
 class HeroBanner extends Component {
   state = {
-    windowWidth: window.innerWidth,
     activeBurger: false,
     activeNavbarItem: "Home",
     navbarItems: ["Home", "About Us", "Calendar", "Leadership", "Projects"]
   };
 
   componentDidMount() {
-    window.addEventListener("resize", _.debounce(this.updateWidth, 200));
     // window.addEventListener("scroll", this.addParallax);
   }
 
@@ -23,8 +19,6 @@ class HeroBanner extends Component {
     this.home.style.backgroundPositionY = offset * 0.9 + "px";
   };
 
-  updateWidth = () => this.setState({ windowWidth: window.innerWidth });
-
   handleBurgerClick = () =>
     this.setState(prevState => ({ activeBurger: !prevState.activeBurger }));
 
@@ -32,12 +26,8 @@ class HeroBanner extends Component {
     this.setState({ activeNavbarItem: e.currentTarget.textContent });
 
   render() {
-    const {
-      activeBurger,
-      activeNavbarItem,
-      navbarItems,
-      windowWidth
-    } = this.state;
+    const { windowWidth } = this.props;
+    const { activeBurger, activeNavbarItem, navbarItems } = this.state;
 
     let deviceType = windowWidth <= 850 ? "mobile" : "desktop";
 

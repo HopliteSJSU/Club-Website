@@ -7062,3 +7062,45 @@ header.navbar .navbar-menu {
   #aboutus .container div.content {
     margin-left: 15%;
     margin-right: 8%; }
+
+.footer {
+  padding: 6rem 6rem 4rem 6rem !important; }
+  .footer .container .columns .column {
+    margin-bottom: 25px;
+    justify-content: center;
+    width: 100%; }
+    .footer .container .columns .column .title {
+      min-width: fit-content; }
+    .footer .container .columns .column .icon {
+      color: orange;
+      font-size: 2rem;
+      margin-right: 15px;
+      justify-content: center;
+      flex-direction: column;
+      height: unset;
+      width: fit-content; }
+    .footer .container .columns .column .content {
+      display: flex;
+      justify-content: center; }
+    .footer .container .columns .column .content.contact-us {
+      width: 85%; }
+      .footer .container .columns .column .content.contact-us .title {
+        margin-bottom: 0px; }
+      .footer .container .columns .column .content.contact-us p {
+        margin: 0px; }
+    .footer .container .columns .column .content.location .sub-content {
+      width: fit-content; }
+      .footer .container .columns .column .content.location .sub-content .title {
+        margin-bottom: 0px; }
+      .footer .container .columns .column .content.location .sub-content p {
+        margin: 0px; }
+    .footer .container .columns .column .content.follow-us {
+      width: 100%; }
+      .footer .container .columns .column .content.follow-us .title {
+        justify-content: center;
+        flex-direction: column;
+        margin: 0px;
+        margin-right: 10px; }
+      .footer .container .columns .column .content.follow-us .icon {
+        font-size: 2.5rem;
+        padding-left: 3%; }

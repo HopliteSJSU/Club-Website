@@ -6,6 +6,9 @@ import uuid from "uuid/v1";
 
 class Leadership extends Component {
   render() {
+    const { windowWidth } = this.props;
+    let deviceType = windowWidth <= 850 ? "mobile" : "desktop";
+
     let columns = [];
     let row = [];
     leaders.forEach(({ name, role, img, linkedin }, index) => {
@@ -31,7 +34,7 @@ class Leadership extends Component {
 
     return (
       <section id="leadership">
-        <div className="container">
+        <div className={`container ${deviceType}`}>
           <h2 className="title has-text-centered">Leadership</h2>
           <h3 className="subtitle has-text-centered">
             Meet our <strong>awesome</strong> leadership team that focus on all
