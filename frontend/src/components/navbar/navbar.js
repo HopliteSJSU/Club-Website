@@ -8,15 +8,30 @@ const clicked = () => {
     "https://docs.google.com/forms/u/2/d/1vT5bP42waOwcxa6DIl9dQi7VE15psoT6JlCdHThw7OE";
 };
 
-const Navbar = ({ isActive, burgerClick, itemClick, activeItem, items }) => (
-  <header className="navbar noselect">
+const style = {
+  position: "fixed",
+  top: "0",
+  left: "0",
+  right: "0",
+  background: "rgba(0, 0, 0, 0.60)"
+};
+
+const Navbar = ({
+  activeBurger,
+  burgerClick,
+  itemClick,
+  activeNavbarItem,
+  navbarItems,
+  fixed
+}) => (
+  <header className="navbar noselect" style={fixed ? { ...style } : null}>
     <div className="container">
       <div className="navbar-brand">
         <a href="#Home" className="navbar-item">
           <h1 className="title has-text-white">Hoplite</h1>
         </a>
         <span
-          className={`navbar-burger burger ${isActive ? "is-active" : ""}`}
+          className={`navbar-burger burger ${activeBurger ? "is-active" : ""}`}
           onClick={burgerClick}
         >
           <span />
@@ -24,21 +39,30 @@ const Navbar = ({ isActive, burgerClick, itemClick, activeItem, items }) => (
           <span />
         </span>
       </div>
-      <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>
+      <div className={`navbar-menu ${activeBurger ? "is-active" : ""}`}>
         <div className="navbar-start">
-          {items.map((item, i) => (
-            <NavLink
-              to={{ hash: `#${item.replace(/\s/g, "")}` }}
-              className={`navbar-item ${
-                activeItem === item ? "is-active" : ""
-              }`}
-              onClick={itemClick}
-              key={i}
-            >
-              <span>{item}</span>
-              <div className="border-bottom" />
-            </NavLink>
-          ))}
+          {navbarItems.map((item, i) => {
+            let path;
+            if (item === "Members") {
+              path = { pathname: `/${item.replace(/\s/g, "").toLowerCase()}` };
+            } else {
+              path = { hash: `#${item.replace(/\s/g, "")}` };
+            }
+
+            return (
+              <NavLink
+                to={path}
+                className={`navbar-item ${
+                  activeNavbarItem === item ? "is-active" : ""
+                }`}
+                onClick={itemClick}
+                key={i}
+              >
+                <span>{item}</span>
+                <div className="border-bottom" />
+              </NavLink>
+            );
+          })}
         </div>
         <div className="navbar-end">
           <Button label="Apply" clicked={clicked} />

@@ -32,15 +32,18 @@ const Footer = props => (
         <div className="column">
           <div className="content follow-us">
             <h3 className="title is-flex">Follow Us:</h3>
-            <span className="icon">
+            <a href="https://twitter.com/sjsuhoplite" className="icon">
               <i className="fab fa-twitter" />
-            </span>
-            <span className="icon">
+            </a>
+            <a
+              href="https://www.linkedin.com/company/sjsu-hoplite/"
+              className="icon"
+            >
               <i className="fab fa-linkedin-in" />
-            </span>
-            <span className="icon">
+            </a>
+            <a href="https://sjsuhoplite.slack.com/" className="icon">
               <i className="fab fa-slack-hash" />
-            </span>
+            </a>
           </div>
         </div>
       </div>

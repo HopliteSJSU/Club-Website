@@ -1,14 +1,9 @@
 import React, { Component } from "react";
 
-import Navbar from "components/navbar/navbar";
 import EmailSubscribe from "components/email-sub/email-sub";
 
 class HeroBanner extends Component {
-  state = {
-    activeBurger: false,
-    activeNavbarItem: "Home",
-    navbarItems: ["Home", "About Us", "Calendar", "Leadership", "Projects"]
-  };
+  state = {};
 
   componentDidMount() {
     // window.addEventListener("scroll", this.addParallax);
@@ -19,15 +14,8 @@ class HeroBanner extends Component {
     this.home.style.backgroundPositionY = offset * 0.9 + "px";
   };
 
-  handleBurgerClick = () =>
-    this.setState(prevState => ({ activeBurger: !prevState.activeBurger }));
-
-  handleItemClick = e =>
-    this.setState({ activeNavbarItem: e.currentTarget.textContent });
-
   render() {
-    const { windowWidth } = this.props;
-    const { activeBurger, activeNavbarItem, navbarItems } = this.state;
+    const { windowWidth, children } = this.props;
 
     let deviceType = windowWidth <= 850 ? "mobile" : "desktop";
 
@@ -38,13 +26,7 @@ class HeroBanner extends Component {
         ref={node => (this.home = node)}
       >
         <div className="hero-head">
-          <Navbar
-            isActive={activeBurger}
-            activeItem={activeNavbarItem}
-            burgerClick={this.handleBurgerClick}
-            itemClick={this.handleItemClick}
-            items={navbarItems}
-          />
+          {children ? children : <div style={{ height: "96px" }} />}
         </div>
 
         <div className="hero-body">

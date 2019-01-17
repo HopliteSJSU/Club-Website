@@ -7064,7 +7064,7 @@ header.navbar .navbar-menu {
     margin-right: 8%; }
 
 .footer {
-  padding: 6rem 6rem 4rem 6rem !important; }
+  padding: 4rem !important; }
   .footer .container .columns .column {
     margin-bottom: 25px;
     justify-content: center;
@@ -7103,4 +7103,24 @@ header.navbar .navbar-menu {
         margin-right: 10px; }
       .footer .container .columns .column .content.follow-us .icon {
         font-size: 2.5rem;
-        padding-left: 3%; }
+        padding-left: 3%;
+        cursor: pointer; }
+        .footer .container .columns .column .content.follow-us .icon:hover {
+          color: #3273dc; }
+
+.modal .modal-card {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  height: 60%; }
+  .modal .modal-card .container {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    justify-content: center; }
+    .modal .modal-card .container .button:hover {
+      border-color: white !important; }
+    .modal .modal-card .container.check-in {
+      margin-top: 10px !important;
+      padding-bottom: 0px !important; }
+      .modal .modal-card .container.check-in .field .control {
+        margin-bottom: 50px; }

@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 //Import all pages
 import FrontPage from "pages/front-page";
+import MemberPage from "pages/member-page";
 
 class App extends Component {
   render() {
@@ -10,7 +11,8 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <React.Fragment>
-            <Route path="/" component={FrontPage} />
+            <Route path="/" exact component={FrontPage} />
+            <Route path="/members" component={MemberPage} />
           </React.Fragment>
         </BrowserRouter>
       </div>
