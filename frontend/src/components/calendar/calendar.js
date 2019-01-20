@@ -18,7 +18,7 @@ class Calendar extends Component {
         <div className={`container ${deviceType}`}>
           <h2 className="title has-text-centered has-text-white">Calendar</h2>
           <h3 className="subtitle has-text-centered has-text-white">
-            Find out when all of our schedule meetings and events are.
+            Find out when all of our club meetings and scheduled events are!
           </h3>
           <div className="container is-flex">
             {deviceType === "desktop" ? (

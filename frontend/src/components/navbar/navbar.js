@@ -3,6 +3,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Button from "components/button/button";
 
+import Logo from "styles/logo.png";
+
 const clicked = () => {
   window.location.href =
     "https://docs.google.com/forms/u/2/d/1vT5bP42waOwcxa6DIl9dQi7VE15psoT6JlCdHThw7OE";
@@ -28,6 +30,9 @@ const Navbar = ({
     <div className="container">
       <div className="navbar-brand">
         <a href="#Home" className="navbar-item">
+          <figure className="image is-4by3">
+            <img alt="Hoplite Logo" src={Logo} width="100%" draggable="false" />
+          </figure>
           <h1 className="title has-text-white">Hoplite</h1>
         </a>
         <span

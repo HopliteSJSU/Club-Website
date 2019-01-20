@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./style/aboutus.css";
-
 const AboutUs = ({ windowWidth }) => {
   let deviceType = windowWidth <= 850 ? "mobile" : "desktop";
 
@@ -9,7 +7,7 @@ const AboutUs = ({ windowWidth }) => {
     <section id="aboutus">
       <div className={`container ${deviceType}`}>
         <h2 className="title has-text-centered">About Us</h2>
-        <h3 className="subtitle has-text-centered">SJSU Hoplite</h3>
+        <h3 className="subtitle has-text-centered hoplite-red">SJSU Hoplite</h3>
 
         <div className="content">
           Established in 2018, <b>Hoplite</b> at San José State University
@@ -25,7 +23,9 @@ const AboutUs = ({ windowWidth }) => {
         <div className="content">
           <div className="columns">
             <div className="column">
-              <h5 className="subtitle has-text-left">What We Do.</h5>
+              <h5 className="subtitle has-text-left hoplite-red">
+                What We Do.
+              </h5>
               <ul>
                 <li>Practice coding challenges and discuss solutions</li>
                 <li>Host inudstry leading tech companies</li>
@@ -35,7 +35,7 @@ const AboutUs = ({ windowWidth }) => {
               </ul>
             </div>
             <div className="column">
-              <h5 className="subtitle has-text-left">Why Join?</h5>
+              <h5 className="subtitle has-text-left hoplite-red">Why Join?</h5>
               <ul>
                 <li>Priority access to industry events</li>
                 <li>Gain access to shared industry contacts</li>

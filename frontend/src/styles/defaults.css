@@ -6762,6 +6762,17 @@ label.panel-block {
 ::selection {
   background-color: rgba(225, 115, 115, 0.5); }
 
+.hoplite-red {
+  color: #fa544b !important; }
+
+#leadership, #aboutus {
+  background: #161616; }
+  #leadership .title, #leadership .subtitle, #leadership .content, #aboutus .title, #aboutus .subtitle, #aboutus .content {
+    color: white; }
+
+section:not(#home) .container:first-child h3.subtitle {
+  font-weight: bold; }
+
 section:not(#home) .container:first-child:not(.mobile) {
   padding-top: 3%;
   padding-left: 7%;
@@ -6793,7 +6804,7 @@ button.button {
   color: white !important;
   min-width: 200px;
   min-height: 50px;
-  background: linear-gradient(to right, #ff8a00, #da1b60);
+  background: linear-gradient(to right, #e59437, #fa544b);
   transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.2s ease;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   border-radius: 4px !important;
@@ -7025,7 +7036,8 @@ header.navbar .navbar-menu {
 
 #leadership .container {
   padding-left: 12% !important;
-  padding-right: 12% !important; }
+  padding-right: 12% !important;
+  padding-bottom: 10% !important; }
   #leadership .container .columns {
     margin-top: 1.5rem; }
     #leadership .container .columns .column {
@@ -7035,14 +7047,14 @@ header.navbar .navbar-menu {
         transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.5s ease;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
         cursor: pointer;
-        border-radius: 5px; }
+        border-radius: 5px;
+        background-color: #4a4a4a; }
         #leadership .container .columns .column .card .card-content {
           padding: 1rem !important; }
           #leadership .container .columns .column .card .card-content .media.media-content .title.is-4 {
+            color: black !important;
             width: fit-content !important;
             margin-right: 5% !important; }
-          #leadership .container .columns .column .card .card-content .media.media-content .fa-linkedin:hover {
-            color: blue; }
         #leadership .container .columns .column .card .card-image .image img {
           border-top-left-radius: 5px !important;
           border-top-right-radius: 5px !important; }
@@ -7072,7 +7084,6 @@ header.navbar .navbar-menu {
     .footer .container .columns .column .title {
       min-width: fit-content; }
     .footer .container .columns .column .icon {
-      color: orange;
       font-size: 2rem;
       margin-right: 15px;
       justify-content: center;
@@ -7106,7 +7117,7 @@ header.navbar .navbar-menu {
         padding-left: 3%;
         cursor: pointer; }
         .footer .container .columns .column .content.follow-us .icon:hover {
-          color: #3273dc; }
+          color: #3273dc !important; }
 
 .modal .modal-card {
   border-bottom-left-radius: 6px;
