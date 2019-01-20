@@ -7124,3 +7124,7 @@ header.navbar .navbar-menu {
       padding-bottom: 0px !important; }
       .modal .modal-card .container.check-in .field .control {
         margin-bottom: 50px; }
+
+.code-display h2 {
+  font-size: 50px;
+  margin-top: 5px; }
