@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 
 import Button from "components/button/button";
 import CheckIn from "components/check-in/check-in";
@@ -11,7 +12,8 @@ class MemberPortal extends React.Component {
   state = {
     showDefault: true,
     showCheckIn: false,
-    showCode: false
+    showCode: false,
+    error: ''
   };
 
   componentDidMount() {
@@ -25,8 +27,16 @@ class MemberPortal extends React.Component {
     }
   }
 
-  generateCode = async () => {
-    this.setState({ code: Math.random() * 10000, showCode: true });
+  generateCode = () => {
+    axios.get("http://localhost:8080/api/checkin/generate")
+      .then(res => {
+        console.log(res);
+        this.setState({ code: res.data.code, showCode: true });
+      })
+      .catch(err => {
+        console.log(err);
+        this.setState({ error: err });
+      });
   };
 
   handleCheckIn = () =>
