@@ -8,11 +8,8 @@ const GenerateCode = ({ code }) => (
     </h3>
     Reresh page to generate new code. Codes expire after 5 minutes.
     <br />
-    {/* <div className="control">
-      <input className="input is-large" type="text" value={code} readOnly />
-    </div> */}
-    <div className="level code-display">
-      <h2 className="level-item">{ code }</h2>
+    <div className="level code-display" style={{ marginTop: "50px" }}>
+      <h2 className="level-item">{code}</h2>
     </div>
   </div>
 );

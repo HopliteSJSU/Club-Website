@@ -6,8 +6,11 @@ import Button from "components/button/button";
 import Logo from "styles/logo.png";
 
 const clicked = () => {
-  window.location.href =
-    "https://docs.google.com/forms/u/2/d/1vT5bP42waOwcxa6DIl9dQi7VE15psoT6JlCdHThw7OE";
+  window.location.href = "https://goo.gl/forms/1KcEXaY9r4dA2mGi1";
+};
+
+const homepage = () => {
+  window.location.href = "/";
 };
 
 const style = {
@@ -29,10 +32,10 @@ const Navbar = ({
   <header className="navbar noselect" style={fixed ? { ...style } : null}>
     <div className="container">
       <div className="navbar-brand">
-        <a href="#Home" className="navbar-item">
-          <figure className="image is-4by3">
-            <img alt="Hoplite Logo" src={Logo} width="100%" draggable="false" />
-          </figure>
+        <figure className="image" onClick={homepage}>
+          <img alt="Hoplite Logo" src={Logo} draggable="false" />
+        </figure>
+        <a href="/" className="navbar-item">
           <h1 className="title has-text-white">Hoplite</h1>
         </a>
         <span

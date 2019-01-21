@@ -5,15 +5,14 @@ import Button from "components/button/button";
 import CheckIn from "components/check-in/check-in";
 import GenerateCode from "components/generate-code/generate-code";
 
-let applyLink =
-  "https://docs.google.com/forms/d/1vT5bP42waOwcxa6DIl9dQi7VE15psoT6JlCdHThw7OE";
+let applyLink = "https://goo.gl/forms/1KcEXaY9r4dA2mGi1";
 
 class MemberPortal extends React.Component {
   state = {
     showDefault: true,
     showCheckIn: false,
     showCode: false,
-    error: ''
+    error: ""
   };
 
   componentDidMount() {
@@ -28,7 +27,8 @@ class MemberPortal extends React.Component {
   }
 
   generateCode = () => {
-    axios.get("http://localhost:8080/api/checkin/generate")
+    axios
+      .get("http://localhost:8080/api/checkin/generate")
       .then(res => {
         console.log(res);
         this.setState({ code: res.data.code, showCode: true });
