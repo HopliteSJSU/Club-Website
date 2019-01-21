@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 
+import { withRouter } from "react-router-dom";
+
 import Button from "components/button/button";
 import CheckIn from "components/check-in/check-in";
 import GenerateCode from "components/generate-code/generate-code";
@@ -12,19 +14,31 @@ class MemberPortal extends React.Component {
     showDefault: true,
     showCheckIn: false,
     showCode: false,
-    error: ""
+    error: "",
+    invalidKeyError: false
   };
 
   componentDidMount() {
-    if (window.location.pathname.includes("/techlead/code")) {
+    const { location, match } = this.props;
+
+    if (location.pathname.includes("/techlead/generate-code/")) {
       this.setState({
         showDefault: false,
         showCheckIn: false
       });
 
-      this.generateCode();
+      if (this.isValidKey(match.params.key)) {
+        this.generateCode();
+      } else {
+        this.setState({ invalidKeyError: true });
+      }
     }
   }
+
+  isValidKey = key => {
+    if (key === process.env.REACT_APP_TECHLEAD_KEY) return true;
+    else return false;
+  };
 
   generateCode = () => {
     axios
@@ -43,7 +57,20 @@ class MemberPortal extends React.Component {
     this.setState({ showCheckIn: true, showDefault: false });
 
   render() {
-    const { showDefault, showCheckIn, showCode, code } = this.state;
+    const {
+      showDefault,
+      showCheckIn,
+      showCode,
+      code,
+      invalidKeyError
+    } = this.state;
+
+    if (invalidKeyError)
+      return (
+        <div className="title is-1">
+          Invalid Key Entered. Try again, sucker.
+        </div>
+      );
 
     return (
       <div className="modal is-active">
@@ -85,4 +112,4 @@ class MemberPortal extends React.Component {
   }
 }
 
-export default MemberPortal;
+export default withRouter(MemberPortal);

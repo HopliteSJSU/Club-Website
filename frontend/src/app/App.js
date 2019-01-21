@@ -12,7 +12,12 @@ class App extends Component {
         <BrowserRouter>
           <React.Fragment>
             <Route path="/" exact component={FrontPage} />
-            <Route path="/members" component={MemberPage} />
+            <Route path="/members" exact component={MemberPage} />
+            <Route
+              exact
+              path="/members/techlead/generate-code/:key"
+              component={MemberPage}
+            />
           </React.Fragment>
         </BrowserRouter>
       </div>
