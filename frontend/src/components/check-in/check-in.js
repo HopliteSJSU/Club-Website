@@ -14,8 +14,13 @@ export default class CheckIn extends Component {
   }
 
   handleSubmit = () => {
+    if (process.env.NODE_ENV === "production") {
+      path = process.env.REACT_APP_BACKEND;
+    } else {
+      path = "http://localhost:8080";
+    }
     axios
-      .post("http://localhost:8080/api/checkin/update", { ...this.state })
+      .post(path + "/api/checkin/update", { ...this.state })
       .then(res => {
         if (res.data.success) {
           alert("Thanks! You are successfully checked in!");

@@ -41,8 +41,15 @@ class MemberPortal extends React.Component {
   };
 
   generateCode = () => {
+    let path;
+    if (process.env.NODE_ENV === "production") {
+      path = process.env.REACT_APP_BACKEND;
+    } else {
+      path = "http://localhost:8080";
+    }
+
     axios
-      .get("http://localhost:8080/api/checkin/generate")
+      .get(path + "/api/checkin/generate")
       .then(res => {
         console.log(res);
         this.setState({ code: res.data.code, showCode: true });
