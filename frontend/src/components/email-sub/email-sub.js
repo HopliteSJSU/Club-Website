@@ -34,12 +34,12 @@ class EmailSub extends Component {
         if (process.env.NODE_ENV === "production") {
           res = await axios.post(
             process.env.REACT_APP_BACKEND +
-              "/api/update/" +
+              "/api/subscribe/" +
               this.emailInput.value
           );
         } else {
           res = await axios.post(
-            "http://localhost:8080/api/update/" + this.emailInput.value
+            "http://localhost:8080/api/subscribe/" + this.emailInput.value
           );
         }
       } catch (err) {

@@ -7058,7 +7058,6 @@ header.navbar .navbar-menu {
     #leadership .container .columns .column .card {
       transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.5s ease;
       box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
-      cursor: pointer;
       border-radius: 5px;
       background-color: #4a4a4a; }
       #leadership .container .columns .column .card .card-content {

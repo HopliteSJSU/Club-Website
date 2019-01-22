@@ -14,6 +14,7 @@ export default class CheckIn extends Component {
   }
 
   handleSubmit = () => {
+    let path;
     if (process.env.NODE_ENV === "production") {
       path = process.env.REACT_APP_BACKEND;
     } else {
