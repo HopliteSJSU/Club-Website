@@ -12,7 +12,7 @@ const Footer = props => (
             <div className="sub-content is-inline-block">
               <h3 className="title">Location</h3>
               <p>
-                7:30pm - Thursdays - MQH 234 <br /> 10:00am - Fridays - TBD
+                Thursday 7:30PM @ MQH 234 <br /> Friday 10:00AM @ MQH 226
               </p>
             </div>
           </div>

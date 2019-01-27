@@ -46,7 +46,7 @@ class EmailSub extends Component {
         console.log(err);
       }
 
-      if (true) {
+      if (res && res.data) {
         this.setState({
           errSubmitEmail: false,
           invalidEmail: false,
