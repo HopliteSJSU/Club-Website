@@ -10,17 +10,23 @@ import Navbar from "components/navbar/navbar";
 import _ from "lodash";
 
 class FrontPage extends Component {
-  state = {
-    windowWidth: window.innerWidth,
-    scrollY: window.scrollY,
-    navbarItems: ["Home", "About Us", "Calendar", "Leadership", "Members"],
-    activeBurger: false,
-    activeNavbarItem: "Home"
-  };
+  constructor(props) {
+    super();
+
+    this.state = {
+      windowWidth: window.innerWidth,
+      scrollY: window.scrollY,
+      navbarItems: ["Home", "About Us", "Calendar", "Leadership", "Members"],
+      activeBurger: false,
+      activeNavbarItem: "Home"
+    };
+
+    this.updateScrollY = _.debounce(this.updateScrollY, 100);
+  }
 
   componentDidMount() {
     window.addEventListener("resize", _.debounce(this.updateWidth, 200));
-    window.addEventListener("scroll", _.debounce(this.updateScrollY, 100));
+    window.addEventListener("scroll", this.handleScrollEvent);
     this.HashLink();
   }
 
@@ -29,6 +35,23 @@ class FrontPage extends Component {
       this.HashLink();
     }
   }
+
+  handleScrollEvent = () => {
+    // this.addParallax();
+    this.updateScrollY();
+  };
+
+  addParallax = () => {
+    let offset = window.pageYOffset * 0.6 + "px";
+
+    let parallaxHome = document.querySelector("#home");
+    let parallaxCalendar = document.querySelector("#calendar");
+
+    if (parallaxHome && parallaxCalendar) {
+      parallaxHome.style.backgroundPositionY = offset;
+      parallaxCalendar.style.backgroundPositionY = offset;
+    }
+  };
 
   updateWidth = () => this.setState({ windowWidth: window.innerWidth });
   updateScrollY = () => this.setState({ scrollY: window.scrollY });
@@ -65,10 +88,13 @@ class FrontPage extends Component {
       activeBurger
     } = this.state;
 
+    let defaultNavbar =
+      (scrollY <= 100 && activeNavbarItem === "Home") || scrollY === 0;
+
     return (
       <React.Fragment>
-        {(scrollY <= 100 && activeNavbarItem === "Home") || scrollY === 0 ? (
-          <HeroBanner windowWidth={windowWidth}>
+        <HeroBanner windowWidth={windowWidth}>
+          {defaultNavbar && (
             <Navbar
               windowWidth={windowWidth}
               navbarItems={navbarItems}
@@ -77,20 +103,18 @@ class FrontPage extends Component {
               burgerClick={this.handleBurgerClick}
               itemClick={this.handleItemClick}
             />
-          </HeroBanner>
-        ) : (
-          <React.Fragment>
-            <HeroBanner windowWidth={windowWidth} />
-            <Navbar
-              windowWidth={windowWidth}
-              navbarItems={navbarItems}
-              activeNavbarItem={activeNavbarItem}
-              activeBurger={activeBurger}
-              burgerClick={this.handleBurgerClick}
-              itemClick={this.handleItemClick}
-              fixed
-            />
-          </React.Fragment>
+          )}
+        </HeroBanner>
+        {!defaultNavbar && (
+          <Navbar
+            windowWidth={windowWidth}
+            navbarItems={navbarItems}
+            activeNavbarItem={activeNavbarItem}
+            activeBurger={activeBurger}
+            burgerClick={this.handleBurgerClick}
+            itemClick={this.handleItemClick}
+            fixed
+          />
         )}
 
         <AboutUs windowWidth={windowWidth} />

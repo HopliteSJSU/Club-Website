@@ -1,4 +1,6 @@
 section.hero
+  position: relative
+  height: 100vh
   background: linear-gradient( rgba(0, 0, 0, 0.85), rgba(236, 111, 102, 0.5) ), url("bg.jpg")
   background-size: cover
   background-attachment: fixed
@@ -13,10 +15,10 @@ section.hero
         h2
           color: white
           font-family: 'Inconsolata', monospace !important
+          min-height: "50px" !important
       .container:nth-child(2)
         margin: 5% 0 3% 0
   .hero-foot
-    &.mobile
     .container
       .columns
         .column
@@ -32,3 +34,10 @@ section.hero
           a:hover
             color: unset
             text-decoration: underline
+
+#cursor
+  animation: blinker 1.2s linear infinite !important
+
+@keyframes blinker
+  50%
+    opacity: 0

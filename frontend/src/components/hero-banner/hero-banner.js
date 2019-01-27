@@ -5,15 +5,6 @@ import EmailSubscribe from "components/email-sub/email-sub";
 class HeroBanner extends Component {
   state = {};
 
-  componentDidMount() {
-    // window.addEventListener("scroll", this.addParallax);
-  }
-
-  addParallax = () => {
-    let offset = window.pageYOffset;
-    this.home.style.backgroundPositionY = offset * 0.9 + "px";
-  };
-
   render() {
     const { windowWidth, children } = this.props;
 
@@ -31,9 +22,33 @@ class HeroBanner extends Component {
 
         <div className="hero-body">
           <div className="container is-inline-block">
-            <div className="container has-text-centered noselect">
+            <div
+              className="container is-flex noselect"
+              style={{
+                justifyContent: "center",
+                flexDirection: "column",
+                textAlign: "center"
+              }}
+            >
               <h1 className="title is-1">Hoplite</h1>
-              <h2 className="subtitle is-2">Ace your coding interviews!</h2>
+              <h2 className="subtitle is-3">
+                <span
+                  className="txt-rotate"
+                  data-rotate={JSON.stringify([
+                    "Master the coding interview.",
+                    "Connect with industry professionals.",
+                    "Club sponsored events and workshops.",
+                    "Build projects over the semester."
+                  ])}
+                />
+                <div
+                  id="cursor"
+                  style={{
+                    display: "inline",
+                    border: "2px solid rgba(255,255,255,0.75)"
+                  }}
+                />
+              </h2>
             </div>
             <EmailSubscribe deviceType={deviceType} />
           </div>
