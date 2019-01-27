@@ -46,14 +46,22 @@ class EmailSub extends Component {
         console.log(err);
       }
 
-      if (res && res.data.success) {
+      if (true) {
         this.setState({
           errSubmitEmail: false,
           invalidEmail: false,
-          loading: false
+          loading: false,
+          success: true
         });
         this.emailInput.value = "";
         this.emailInput.placeholder = `Success!`;
+
+        setTimeout(() => {
+          this.setState({
+            success: false
+          });
+          this.emailInput.placeholder = `Please enter your email here!`;
+        }, 2500);
       } else {
         this.setState({
           errSubmitEmail: true,
@@ -83,7 +91,13 @@ class EmailSub extends Component {
   };
 
   render() {
-    const { showInput, invalidEmail, errSubmitEmail, loading } = this.state;
+    const {
+      showInput,
+      invalidEmail,
+      errSubmitEmail,
+      loading,
+      success
+    } = this.state;
     const { deviceType } = this.props;
 
     let isHidden = showInput ? "show" : "hide";
@@ -100,16 +114,25 @@ class EmailSub extends Component {
             <input
               className={`input ${deviceType}`}
               id="email-input"
-              placeholder="What's your email?"
+              placeholder="Please enter your email here!"
               type="email"
               onKeyPress={this.handleKeyPress}
               ref={node => {
                 this.emailInput = node;
               }}
+              autoComplete="off"
             />
-            {loading ? (
-              <LoadingIcon />
-            ) : (
+
+            {loading && <LoadingIcon />}
+            {success && (
+              <span
+                className={`icon ${showInput ? "show" : "hide"}`}
+                id="success-check"
+              >
+                <i class="fas fa-check" />
+              </span>
+            )}
+            {!loading && !success && (
               <span
                 className={`icon ${showInput ? "show" : "hide"}`}
                 onClick={this.submitEmail}
@@ -119,7 +142,9 @@ class EmailSub extends Component {
               </span>
             )}
             <span
-              className={`icon ${showInput ? "show" : "hide"}`}
+              className={`icon ${showInput ? "show" : "hide"} ${
+                success ? "success" : "default"
+              }`}
               id="email-icon"
             >
               <i className="fas fa-envelope" />

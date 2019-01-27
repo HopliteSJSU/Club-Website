@@ -6885,6 +6885,9 @@ div.container#email-sub {
           opacity: 0; }
         div.container#email-sub div.container#input-container div.container.for-animation span.icon.show {
           opacity: 1; }
+      div.container#email-sub div.container#input-container div.container.for-animation #success-check {
+        right: 3%;
+        color: #23d160; }
       div.container#email-sub div.container#input-container div.container.for-animation #arrow-submit {
         cursor: pointer;
         right: 3%; }
@@ -6892,6 +6895,8 @@ div.container#email-sub {
           color: #3273dc; }
       div.container#email-sub div.container#input-container div.container.for-animation #email-icon {
         left: 3%; }
+        div.container#email-sub div.container#input-container div.container.for-animation #email-icon.success {
+          color: #23d160; }
       div.container#email-sub div.container#input-container div.container.for-animation input#email-input {
         font-size: 1.10rem;
         color: white;
