@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
 import EmailSubscribe from "components/email-sub/email-sub";
+import Typer from "components/animations/typer/typer";
+import uuid from "uuid/v1";
 
 class HeroBanner extends Component {
   state = {};
@@ -31,23 +33,8 @@ class HeroBanner extends Component {
               }}
             >
               <h1 className="title is-1">Hoplite</h1>
-              <h2 className="subtitle is-3">
-                <span
-                  className="txt-rotate"
-                  data-rotate={JSON.stringify([
-                    "Master the coding interview.",
-                    "Connect with industry professionals.",
-                    "Club sponsored events and workshops.",
-                    "Build projects over the semester."
-                  ])}
-                />
-                <div
-                  id="cursor"
-                  style={{
-                    display: "inline",
-                    border: "2px solid rgba(255,255,255,0.75)"
-                  }}
-                />
+              <h2 className="subtitle is-3" key={uuid()}>
+                <Typer />
               </h2>
             </div>
             <EmailSubscribe deviceType={deviceType} />
