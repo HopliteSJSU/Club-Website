@@ -6906,7 +6906,7 @@ div.container#email-sub {
         background-color: rgba(0, 0, 0, 0.5);
         text-decoration: none !important; }
         div.container#email-sub div.container#input-container div.container.for-animation input#email-input.mobile {
-          padding-left: 14%;
+          padding-left: 13.5%;
           padding-right: 12%; }
         div.container#email-sub div.container#input-container div.container.for-animation input#email-input.desktop {
           padding-left: 9%;
@@ -6949,10 +6949,12 @@ div.container.for-animation.error-email #email-icon {
 
 section.hero {
   position: relative;
+  min-height: 775px !important;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(236, 111, 102, 0.5)), url("bg.jpg");
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  overflow: hidden; }
   section.hero .hero-body .container .container {
     margin: 0 0 3.5% 0; }
     section.hero .hero-body .container .container h1 {
@@ -6961,8 +6963,7 @@ section.hero {
       font-size: 5rem !important; }
     section.hero .hero-body .container .container h2 {
       color: white;
-      font-family: 'Inconsolata', monospace !important;
-      min-height: "50px" !important; }
+      font-family: 'Inconsolata', monospace !important; }
   section.hero .hero-body .container .container:nth-child(2) {
     margin: 5% 0 3% 0; }
   section.hero .hero-foot .container .columns .column {
@@ -7167,6 +7168,9 @@ header.navbar .navbar-menu {
       .modal .modal-card .container.check-in .field .control {
         margin-bottom: 50px; }
 
+#generate-code {
+  margin-top: 20% !important; }
+
 .code-display h2 {
   font-size: 50px;
-  margin-top: 5px; }
+  margin-top: 20px; }

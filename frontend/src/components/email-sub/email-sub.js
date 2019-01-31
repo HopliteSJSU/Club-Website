@@ -10,15 +10,25 @@ import _ from "lodash";
 class EmailSub extends Component {
   constructor(props) {
     super();
+
     this.state = {
       showInput: false,
       invalidEmail: false,
       errSubmitEmail: false,
-      loading: false
+      loading: false,
+      deviceType: "desktop"
     };
 
     //So user can't spam enter when submitting an email.
     this.submitEmail = _.debounce(this.submitEmail.bind(this), 500);
+  }
+
+  static getDerivedStateFromProps(props, state){
+    if (props.deviceType !== state.deviceType){
+      return { deviceType: props.deviceType }
+    }
+
+    return null
   }
 
   validateEmail = email => {
@@ -88,6 +98,14 @@ class EmailSub extends Component {
   handleSubClick = () => {
     this.setState({ showInput: true });
     this.emailInput.focus();
+
+    if (this.state.deviceType === "mobile"){
+      let top = this.emailInput.getBoundingClientRect().top + window.scrollY;
+      window.scroll({
+        top: top - 200,
+        behavior: "smooth"
+      });
+    }
   };
 
   render() {
@@ -96,9 +114,9 @@ class EmailSub extends Component {
       invalidEmail,
       errSubmitEmail,
       loading,
-      success
+      success,
+      deviceType
     } = this.state;
-    const { deviceType } = this.props;
 
     let isHidden = showInput ? "show" : "hide";
     let invalid = invalidEmail ? "invalid-email" : "";

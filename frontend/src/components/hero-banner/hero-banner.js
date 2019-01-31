@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 import EmailSubscribe from "components/email-sub/email-sub";
 import Typer from "components/animations/typer/typer";
-import uuid from "uuid/v1";
 
 class HeroBanner extends Component {
   state = {};
@@ -33,7 +32,7 @@ class HeroBanner extends Component {
               }}
             >
               <h1 className="title is-1">Hoplite</h1>
-              <h2 className="subtitle is-3" key={uuid()}>
+              <h2 className="subtitle is-3" style={{ minHeight: "80px" }}>
                 <Typer />
               </h2>
             </div>

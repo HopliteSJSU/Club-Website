@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 //Import all pages
 import FrontPage from "pages/front-page";
 import MemberPage from "pages/member-page";
+import AdminPage from "pages/admin-page"
 
 class App extends Component {
   render() {
@@ -15,8 +16,8 @@ class App extends Component {
             <Route path="/members" exact component={MemberPage} />
             <Route
               exact
-              path="/members/techlead/generate-code/:key"
-              component={MemberPage}
+              path="/admin/generate-code/:key"
+              component={AdminPage}
             />
           </React.Fragment>
         </BrowserRouter>

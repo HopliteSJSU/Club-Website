@@ -7,10 +7,7 @@ export default class CheckIn extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      email: "",
-      code: ""
-    };
+    this.state = {};
   }
 
   handleSubmit = () => {
@@ -21,11 +18,14 @@ export default class CheckIn extends Component {
       path = "http://localhost:8080";
     }
     axios
-      .post(path + "/api/checkin/update", { ...this.state })
+      .post(path + "/api/checkin/update", {
+        email: this.emailInput.value,
+        code: this.codeInput.value
+      })
       .then(res => {
         if (res.data.success) {
           alert("Thanks! You are successfully checked in!");
-          window.location.replace("http://www.sjsuhoplite.org");
+          // window.location.replace("http://www.sjsuhoplite.org");
         }
       })
       .catch(err => {
@@ -33,11 +33,6 @@ export default class CheckIn extends Component {
           alert(err.response.data.msg);
         else alert("Check your form information, and try again");
       });
-  };
-
-  handleChange = e => {
-    let { value, name } = e.target;
-    this.setState({ [name]: value });
   };
 
   render() {
@@ -53,24 +48,21 @@ export default class CheckIn extends Component {
             <label>Please enter SJSU email</label>
             <input
               name="email"
-              onChange={this.handleChange}
-              value={this.state.email}
               className="input is-rounded is-medium"
               type="text"
               placeholder="SJSU Email"
+              ref={node => (this.emailInput = node)}
             />
           </div>
-          {/* Max length for check in code is 6 */}
           <div className="control">
             <label>Please enter CODE provided by the Tech Lead</label>
             <input
               name="code"
-              onChange={this.handleChange}
-              value={this.state.code}
               className="input is-rounded is-medium"
               type="text"
               placeholder="Enter Code"
               maxLength="7"
+              ref={node => (this.codeInput = node)}
             />
           </div>
           <div className="container is-flex actions">
