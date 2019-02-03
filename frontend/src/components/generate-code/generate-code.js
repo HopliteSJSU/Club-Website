@@ -6,7 +6,7 @@ const GenerateCode = ({ code }) => (
       This part of website is for officers only! Generate code for members to
       check-in.
     </h3>
-    Reresh page to generate new code. Codes expire after 5 minutes.
+    Reresh page to generate new code. Codes expire after 10 minutes.
     <br />
     <div className="level code-display">
       <h2 className="level-item">{code}</h2>

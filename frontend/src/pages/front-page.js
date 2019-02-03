@@ -37,6 +37,7 @@ class FrontPage extends Component {
   }
 
   handleScrollEvent = () => {
+    //This works but it's not 100% smooth
     // this.addParallax();
     this.updateScrollY();
   };

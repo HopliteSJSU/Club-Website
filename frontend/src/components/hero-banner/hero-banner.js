@@ -10,6 +10,7 @@ class HeroBanner extends Component {
     const { windowWidth, children } = this.props;
 
     let deviceType = windowWidth <= 850 ? "mobile" : "desktop";
+    let subtitleSize = deviceType === "mobile" ? "is-4" : "is-3";
 
     return (
       <section
@@ -31,8 +32,11 @@ class HeroBanner extends Component {
                 textAlign: "center"
               }}
             >
-              <h1 className="title is-1">Hoplite</h1>
-              <h2 className="subtitle is-3" style={{ minHeight: "80px" }}>
+              <h1 className={`title ${deviceType}`}>Hoplite</h1>
+              <h2
+                className={`subtitle ${subtitleSize}`}
+                style={{ minHeight: "80px" }}
+              >
                 <Typer />
               </h2>
             </div>
@@ -40,11 +44,11 @@ class HeroBanner extends Component {
           </div>
         </div>
 
-        <div className={`hero-foot ${deviceType}`}>
+        <div className="hero-foot">
           <div className="container">
             <div className="columns is-variable">
               <div className="column is-flex" />
-              <div className="column has-text-centered is-5">
+              <div className={`column has-text-centered is-5 ${deviceType}`}>
                 <b className="is-block">Meeting Times:</b>
                 <span className="is-block">Thursday 7:30PM @ MQH 234</span>
                 <span className="is-block">Friday 10:00AM @ MQH 226</span>

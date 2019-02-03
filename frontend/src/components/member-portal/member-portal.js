@@ -23,15 +23,12 @@ class MemberPortal extends React.Component {
         <div className="modal-card">
           <header className="modal-card-head">
             <p className="modal-card-title">Member Portal</p>
+            <a href="/">Homepage</a>
           </header>
           <section className="modal-card-body">
             {showDefault && (
               <React.Fragment>
-                <h3 className="subtitle">
-                  Notice: This portal is meant for members only.
-                </h3>
-                <br />
-                <h3 className="subtitle">
+                <h3 className="subtitle has-text-centered">
                   If you are not yet a member we recommend that you{" "}
                   <a className="has-text-bold" href={applyLink}>
                     APPLY HERE

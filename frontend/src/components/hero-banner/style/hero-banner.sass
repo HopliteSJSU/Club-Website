@@ -2,7 +2,7 @@ section.hero
   position: relative
   min-height: 775px !important
   height: 100vh
-  background: linear-gradient( rgba(0, 0, 0, 0.85), rgba(236, 111, 102, 0.5) ), url("bg.jpg")
+  background: linear-gradient( rgba(0, 0, 0, 0.85), rgba(236, 111, 102, 0.5) ), url("http://sjsuhoplite.org:8080/images/sjsu-tower.jpg")
   background-size: cover
   background-attachment: fixed
   overflow: hidden
@@ -13,7 +13,10 @@ section.hero
         h1
           color: white
           margin-bottom: 3rem !important
-          font-size: 5rem !important
+          &.mobile
+            font-size: 3.5rem !important
+          &.desktop
+            font-size: 5rem !important
         h2
           color: white
           font-family: 'Inconsolata', monospace !important
@@ -24,10 +27,13 @@ section.hero
       .columns
         .column
           font-family: 'Inconsolata', monospace !important
-          font-size: 1.75rem
           color: white
           justify-content: center
           margin-bottom: 3rem
+          &.mobile
+            font-size: 1.5rem
+          &.desktop
+            font-size: 1.75rem
           a
             font-weight: bold
             padding-left: 7px

@@ -45,7 +45,7 @@ const Footer = props => (
               <i className="fab fa-linkedin-in" />
             </a>
             <a
-              href="https://sjsuhoplite.slack.com/"
+              href="https://join.slack.com/t/sjsuhoplite/shared_invite/enQtNTQwOTYwMDIyODU1LWJiMDlhMjkxMTFlOTMxNzIyNmFiZjQyMTQ2ZGYzNWU5ZjU3OGZkOWI5ZWQ2NTFhNzA1MzAxOTQyYjhjOWQ1YjM"
               className="icon hoplite-red"
             >
               <i className="fab fa-slack-hash" />

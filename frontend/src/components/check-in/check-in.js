@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import _ from "lodash";
 
 import Button from "components/button/button";
 
@@ -8,6 +9,8 @@ export default class CheckIn extends Component {
     super(props);
 
     this.state = {};
+
+    this.handleSubmit = _.debounce(this.handleSubmit.bind(this), 500);
   }
 
   handleSubmit = () => {
@@ -19,29 +22,36 @@ export default class CheckIn extends Component {
     }
     axios
       .post(path + "/api/checkin/update", {
-        email: this.emailInput.value,
-        code: this.codeInput.value
+        email: this.emailInput.value.toLowerCase(),
+        code: this.codeInput.value.toLowerCase()
       })
       .then(res => {
         if (res.data.success) {
-          alert("Thanks! You are successfully checked in!");
-          // window.location.replace("http://www.sjsuhoplite.org");
+          alert("Success! You are checked in, thanks.");
+          window.location.href = "http://www.sjsuhoplite.org";
         }
       })
       .catch(err => {
-        if (err.response.data.msg !== undefined && err.response.data.msg)
+        if (
+          err.response &&
+          err.response.data.msg !== undefined &&
+          err.response.data.msg
+        )
           alert(err.response.data.msg);
         else alert("Check your form information, and try again");
       });
   };
 
+  handleKeyPress = e => {
+    if (e.key === "Enter") {
+      this.handleSubmit();
+    }
+  };
+
   render() {
     return (
       <div className="container check-in">
-        <h3 className="subtitle">
-          If you attended one of our sessions either Thursday or Friday please
-          fill out form below. Thank you!
-        </h3>
+        <p>Please check in by entering your information below! Thanks.</p>
         <br />
         <div className="field">
           <div className="control">
@@ -51,18 +61,22 @@ export default class CheckIn extends Component {
               className="input is-rounded is-medium"
               type="text"
               placeholder="SJSU Email"
+              onKeyPress={this.handleKeyPress}
               ref={node => (this.emailInput = node)}
+              autoComplete="off"
             />
           </div>
           <div className="control">
-            <label>Please enter CODE provided by the Tech Lead</label>
+            <label>Please enter unique code</label>
             <input
               name="code"
               className="input is-rounded is-medium"
               type="text"
               placeholder="Enter Code"
               maxLength="7"
+              onKeyPress={this.handleKeyPress}
               ref={node => (this.codeInput = node)}
+              autoComplete="off"
             />
           </div>
           <div className="container is-flex actions">

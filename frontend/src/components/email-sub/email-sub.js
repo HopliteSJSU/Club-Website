@@ -23,12 +23,12 @@ class EmailSub extends Component {
     this.submitEmail = _.debounce(this.submitEmail.bind(this), 500);
   }
 
-  static getDerivedStateFromProps(props, state){
-    if (props.deviceType !== state.deviceType){
-      return { deviceType: props.deviceType }
+  static getDerivedStateFromProps(props, state) {
+    if (props.deviceType !== state.deviceType) {
+      return { deviceType: props.deviceType };
     }
 
-    return null
+    return null;
   }
 
   validateEmail = email => {
@@ -45,11 +45,12 @@ class EmailSub extends Component {
           res = await axios.post(
             process.env.REACT_APP_BACKEND +
               "/api/subscribe/" +
-              this.emailInput.value
+              this.emailInput.value.toLowerCase()
           );
         } else {
           res = await axios.post(
-            "http://localhost:8080/api/subscribe/" + this.emailInput.value
+            "http://localhost:8080/api/subscribe/" +
+              this.emailInput.value.toLowerCase()
           );
         }
       } catch (err) {
@@ -99,7 +100,7 @@ class EmailSub extends Component {
     this.setState({ showInput: true });
     this.emailInput.focus();
 
-    if (this.state.deviceType === "mobile"){
+    if (this.state.deviceType === "mobile") {
       let top = this.emailInput.getBoundingClientRect().top + window.scrollY;
       window.scroll({
         top: top - 200,

@@ -6898,7 +6898,7 @@ div.container#email-sub {
         div.container#email-sub div.container#input-container div.container.for-animation #email-icon.success {
           color: #23d160; }
       div.container#email-sub div.container#input-container div.container.for-animation input#email-input {
-        font-size: 1.10rem;
+        font-size: 1rem;
         color: white;
         height: 50px;
         border: none;
@@ -6951,7 +6951,7 @@ section.hero {
   position: relative;
   min-height: 775px !important;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(236, 111, 102, 0.5)), url("bg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(236, 111, 102, 0.5)), url("http://sjsuhoplite.org:8080/images/sjsu-tower.jpg");
   background-size: cover;
   background-attachment: fixed;
   overflow: hidden; }
@@ -6959,8 +6959,11 @@ section.hero {
     margin: 0 0 3.5% 0; }
     section.hero .hero-body .container .container h1 {
       color: white;
-      margin-bottom: 3rem !important;
-      font-size: 5rem !important; }
+      margin-bottom: 3rem !important; }
+      section.hero .hero-body .container .container h1.mobile {
+        font-size: 3.5rem !important; }
+      section.hero .hero-body .container .container h1.desktop {
+        font-size: 5rem !important; }
     section.hero .hero-body .container .container h2 {
       color: white;
       font-family: 'Inconsolata', monospace !important; }
@@ -6968,10 +6971,13 @@ section.hero {
     margin: 5% 0 3% 0; }
   section.hero .hero-foot .container .columns .column {
     font-family: 'Inconsolata', monospace !important;
-    font-size: 1.75rem;
     color: white;
     justify-content: center;
     margin-bottom: 3rem; }
+    section.hero .hero-foot .container .columns .column.mobile {
+      font-size: 1.5rem; }
+    section.hero .hero-foot .container .columns .column.desktop {
+      font-size: 1.75rem; }
     section.hero .hero-foot .container .columns .column a {
       font-weight: bold;
       padding-left: 7px;
@@ -6987,10 +6993,16 @@ section.hero {
   50% {
     opacity: 0; } }
 
-header.navbar .container:nth-child(1) {
-  max-width: 1650px;
+header.navbar.mobile {
+  padding-left: 5%;
+  padding-right: 0%; }
+
+header.navbar.desktop {
   padding-left: 5%;
   padding-right: 5%; }
+
+header.navbar .navbar-brand .navbar-burger span {
+  height: 2px; }
 
 header.navbar .navbar-brand .image {
   width: 50px;
@@ -7007,21 +7019,26 @@ header.navbar .navbar-brand .image {
 header.navbar .navbar-menu {
   background-color: rgba(0, 0, 0, 0) !important;
   box-shadow: none !important; }
-  header.navbar .navbar-menu.is-active .navbar-start .navbar-item {
-    margin-left: auto !important;
-    margin-right: auto !important; }
-    header.navbar .navbar-menu.is-active .navbar-start .navbar-item.is-active .border-bottom:after {
-      bottom: 5% !important;
-      transform: scale(1) !important; }
-  header.navbar .navbar-menu.is-active .navbar-end {
-    justify-content: center;
-    flex-direction: column;
-    display: flex; }
+  header.navbar .navbar-menu.is-active {
+    padding-right: 5% !important; }
+    header.navbar .navbar-menu.is-active .navbar-start .navbar-item {
+      margin-bottom: 5px;
+      margin-left: auto !important;
+      margin-right: auto !important; }
+      header.navbar .navbar-menu.is-active .navbar-start .navbar-item.is-active .border-bottom:after {
+        bottom: 5% !important;
+        transform: scale(1) !important; }
+    header.navbar .navbar-menu.is-active .navbar-end {
+      justify-content: center;
+      flex-direction: column;
+      display: flex; }
   header.navbar .navbar-menu .navbar-end {
     margin-left: 0px !important;
-    justify-content: center;
-    flex-direction: column; }
+    align-items: center; }
     header.navbar .navbar-menu .navbar-end .button {
+      margin-top: 15px;
+      position: relative;
+      display: inline-block;
       min-width: 125px;
       min-height: 40px;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -7072,10 +7089,13 @@ header.navbar .navbar-menu {
     max-width: 277.72px;
     margin: auto !important; }
     #leadership .container .columns .column .card {
-      transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.5s ease;
+      transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.2s ease;
       box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
       border-radius: 5px;
-      background-color: #4a4a4a; }
+      background-color: #0a0a0a !important;
+      cursor: pointer; }
+      #leadership .container .columns .column .card:hover {
+        transform: scale(1.05); }
       #leadership .container .columns .column .card .card-content {
         padding: 1rem !important; }
         #leadership .container .columns .column .card .card-content .media.media-content .title.is-4 {
@@ -7087,7 +7107,7 @@ header.navbar .navbar-menu {
         border-top-right-radius: 5px !important; }
 
 #calendar {
-  background: linear-gradient(to right, rgba(255, 138, 0, 0.5), rgba(218, 27, 96, 0.5)), url("bg.jpg");
+  background: linear-gradient(to right, rgba(255, 138, 0, 0.5), rgba(218, 27, 96, 0.5)), url("http://sjsuhoplite.org:8080/images/sjsu-tower.jpg");
   background-size: cover;
   background-attachment: fixed;
   min-height: 700px !important;
@@ -7154,7 +7174,14 @@ header.navbar .navbar-menu {
 .modal .modal-card {
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
-  height: 75%; }
+  min-height: 600px !important;
+  height: 75%;
+  border-radius: 0px !important; }
+  .modal .modal-card .modal-card-head {
+    border-radius: 0px !important; }
+  .modal .modal-card .modal-card-body {
+    padding-top: 35px;
+    border-radius: 0px !important; }
   .modal .modal-card .container {
     width: 100%;
     margin-top: 50px;
@@ -7162,11 +7189,6 @@ header.navbar .navbar-menu {
     justify-content: center; }
     .modal .modal-card .container .button:hover {
       border-color: white !important; }
-    .modal .modal-card .container.check-in {
-      margin-top: 10px !important;
-      padding-bottom: 0px !important; }
-      .modal .modal-card .container.check-in .field .control {
-        margin-bottom: 50px; }
 
 #generate-code {
   margin-top: 20% !important; }
@@ -7174,3 +7196,15 @@ header.navbar .navbar-menu {
 .code-display h2 {
   font-size: 50px;
   margin-top: 20px; }
+
+.check-in {
+  margin-top: 10px !important;
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important; }
+  .check-in p {
+    font-size: 1.15rem;
+    margin-bottom: 25px; }
+  .check-in .field .control {
+    margin-bottom: 25px; }
+  .check-in .actions button {
+    margin-top: 30px !important; }
