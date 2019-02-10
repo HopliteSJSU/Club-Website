@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import Button from "components/button/button";
 
 import Logo from "styles/logo.png";
+import SocialMediaIcons from "components/social-media-icons/social-media-icons";
 
 const clicked = () => {
   window.location.href = "https://goo.gl/forms/1KcEXaY9r4dA2mGi1";
@@ -51,7 +52,10 @@ const Navbar = ({
       </span>
     </div>
     <div className={`navbar-menu ${activeBurger ? "is-active" : ""}`}>
-      <div className="navbar-start">
+      <div
+        className="navbar-start"
+        style={{ marginLeft: windowWidth <= 850 ? "auto" : "24.5%" }}
+      >
         {navbarItems.map((item, i) => {
           let path;
           if (item === "Members") {
@@ -76,7 +80,10 @@ const Navbar = ({
         })}
       </div>
       <div className="navbar-end">
-        <Button label="Apply" clicked={clicked} />
+        <SocialMediaIcons />
+        {/*
+            <Button label="Apply" clicked={clicked} />
+          */}
       </div>
     </div>
   </header>

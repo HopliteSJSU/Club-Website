@@ -4,6 +4,7 @@ import { withRouter } from "react-router-dom";
 import axios from "axios";
 
 import GenerateCode from "components/generate-code/generate-code";
+import Button from "components/button/button";
 
 class AdminPage extends Component {
   state = {
@@ -55,8 +56,16 @@ class AdminPage extends Component {
       );
 
     return (
-      <div className="container has-text-centered">
-        <GenerateCode code={code} />
+      <div className="container">
+        <div
+          className="container has-text-centered"
+          style={{ minHeight: "200px" }}
+        >
+          <GenerateCode code={code} />
+        </div>
+        <div className="container is-flex" style={{ justifyContent: "center" }}>
+          <Button label="Generate Code" />
+        </div>
       </div>
     );
   }

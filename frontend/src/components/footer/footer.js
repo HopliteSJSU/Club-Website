@@ -1,5 +1,7 @@
 import React from "react";
 
+import SocialMediaIcons from "components/social-media-icons/social-media-icons";
+
 const Footer = props => (
   <footer className="footer">
     <div className="container">
@@ -30,27 +32,7 @@ const Footer = props => (
         </div>
 
         <div className="column">
-          <div className="content follow-us">
-            <h3 className="title is-flex">Follow Us:</h3>
-            <a
-              href="https://twitter.com/sjsuhoplite"
-              className="icon hoplite-red"
-            >
-              <i className="fab fa-twitter" />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/sjsu-hoplite/"
-              className="icon hoplite-red"
-            >
-              <i className="fab fa-linkedin-in" />
-            </a>
-            <a
-              href="https://join.slack.com/t/sjsuhoplite/shared_invite/enQtNTQwOTYwMDIyODU1LWJiMDlhMjkxMTFlOTMxNzIyNmFiZjQyMTQ2ZGYzNWU5ZjU3OGZkOWI5ZWQ2NTFhNzA1MzAxOTQyYjhjOWQ1YjM"
-              className="icon hoplite-red"
-            >
-              <i className="fab fa-slack-hash" />
-            </a>
-          </div>
+          <SocialMediaIcons />
         </div>
       </div>
     </div>
