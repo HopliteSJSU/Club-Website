@@ -12,17 +12,17 @@ class AdminPage extends Component {
     code: null
   };
 
-  componentDidMount() {
+  isValidKey = key => {
+    if (key === process.env.REACT_APP_TECHLEAD_KEY) return true;
+    else return false;
+  };
+
+  handleBtnClick = () => {
     if (this.isValidKey(this.props.match.params.key)) {
       this.generateCode();
     } else {
       this.setState({ invalidKeyError: true });
     }
-  }
-
-  isValidKey = key => {
-    if (key === process.env.REACT_APP_TECHLEAD_KEY) return true;
-    else return false;
   };
 
   generateCode = () => {
@@ -64,7 +64,7 @@ class AdminPage extends Component {
           <GenerateCode code={code} />
         </div>
         <div className="container is-flex" style={{ justifyContent: "center" }}>
-          <Button label="Generate Code" />
+          <Button label="Generate Code" clicked={this.handleBtnClick} />
         </div>
       </div>
     );

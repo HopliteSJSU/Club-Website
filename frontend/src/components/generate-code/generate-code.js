@@ -9,7 +9,11 @@ const GenerateCode = ({ code }) => (
     Reresh page to generate new code. Codes expire after 10 minutes.
     <br />
     <div className="level code-display">
-      <h2 className="level-item">{code}</h2>
+      {code ? (
+        <h2 className="level-item">{code}</h2>
+      ) : (
+        <h2 className="level-item">------</h2>
+      )}
     </div>
   </div>
 );
