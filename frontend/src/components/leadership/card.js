@@ -20,10 +20,7 @@ class Card extends React.Component {
             <div className="media">
               <div className="media-content">
                 <p className="title is-5 has-text-centered">{name}</p>
-                <p
-                  className="subtitle is-6 has-text-centered hoplite-red"
-                  style={{ fontWeight: "bold" }}
-                >
+                <p className="subtitle is-6 has-text-centered hoplite-purple">
                   {role}
                 </p>
               </div>

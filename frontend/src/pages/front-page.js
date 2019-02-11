@@ -68,6 +68,11 @@ class FrontPage extends Component {
           behavior: "smooth"
         });
       }
+    } else if (hash === "") {
+      window.scroll({
+        top: 0,
+        behavior: "smooth"
+      });
     }
   };
 

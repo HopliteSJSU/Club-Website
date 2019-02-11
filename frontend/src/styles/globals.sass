@@ -15,23 +15,27 @@
 ::selection
   background-color: rgba(225,115,115,0.5)
 
-.hoplite-red
-  color: #fa544b !important
+.hoplite-purple
+  font-weight: bold
+  background: -webkit-linear-gradient(135deg, #6e8efb, #a777e3)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
 
-#leadership, #aboutus
+.title, .subtitle, .content
+  color: $white
+
+body, html
   background: rgb(22,22,22)
-  .title, .subtitle, .content
-    color: white
 
 section:not(#home)
+  padding-top: 3%
   .container:first-child
     h3.subtitle
       font-weight: bold
     &:not(.mobile)
-      padding-top: 3%
       padding-left: 7%
       padding-right: 7%
-      padding-bottom: 7%
+      padding-bottom: 5%
       h2.title
         font-size: 50px !important
       h3.subtitle

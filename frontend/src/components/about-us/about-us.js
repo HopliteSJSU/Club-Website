@@ -7,7 +7,9 @@ const AboutUs = ({ windowWidth }) => {
     <section id="aboutus">
       <div className={`container ${deviceType}`}>
         <h2 className="title has-text-centered">About Us</h2>
-        <h3 className="subtitle has-text-centered hoplite-red">SJSU Hoplite</h3>
+        <h3 className="subtitle has-text-centered hoplite-purple">
+          SJSU Hoplite
+        </h3>
 
         <div className="content">
           Established in 2018, <b>Hoplite</b> at San José State University
@@ -23,19 +25,21 @@ const AboutUs = ({ windowWidth }) => {
         <div className="content">
           <div className="columns">
             <div className="column">
-              <h5 className="subtitle has-text-left hoplite-red">
+              <h5 className="subtitle has-text-left hoplite-purple">
                 What We Do.
               </h5>
               <ul>
                 <li>Practice coding challenges and discuss solutions</li>
-                <li>Host inudstry leading tech companies</li>
+                <li>Host industry leading tech companies</li>
                 <li>1-1 mock-interview sessions</li>
                 <li>Team-based projects</li>
                 <li>Share internship and interview knowledge</li>
               </ul>
             </div>
             <div className="column">
-              <h5 className="subtitle has-text-left hoplite-red">Why Join?</h5>
+              <h5 className="subtitle has-text-left hoplite-purple">
+                Why Join?
+              </h5>
               <ul>
                 <li>Priority access to industry events</li>
                 <li>Gain access to shared industry contacts</li>

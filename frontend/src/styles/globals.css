@@ -17,10 +17,8 @@
 .hoplite-red {
   color: #fa544b !important; }
 
-#leadership, #aboutus {
+body, html {
   background: #161616; }
-  #leadership .title, #leadership .subtitle, #leadership .content, #aboutus .title, #aboutus .subtitle, #aboutus .content {
-    color: white; }
 
 section:not(#home) .container:first-child h3.subtitle {
   font-weight: bold; }

@@ -18,9 +18,11 @@ class Calendar extends Component {
         <div className={`container ${deviceType}`}>
           <h2 className="title has-text-centered has-text-white">Calendar</h2>
           <h3 className="subtitle has-text-centered has-text-white">
-            Find out when all of our club meetings and scheduled events are!
+            Find out when and where our{" "}
+            <span className="hoplite-purple">club meetings</span> and events
+            will happen!
           </h3>
-          <div className="is-flex">
+          <div className={`is-flex ${deviceType}`}>
             {deviceType === "desktop" ? (
               <iframe
                 src="https://calendar.google.com/calendar/embed?showTitle=0&showPrint=0&showCalendars=0&height=600&wkst=1&bgcolor=%23FFFFFF&src=c9umttrjh8lh95rot8fs7nd0nk%40group.calendar.google.com&color=%232F6309&ctz=America%2FLos_Angeles"

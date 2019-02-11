@@ -28,14 +28,9 @@ class MemberPortal extends React.Component {
           <section className="modal-card-body">
             {showDefault && (
               <React.Fragment>
-                <h3 className="subtitle has-text-centered">
-                  If you are not yet a member we recommend that you{" "}
-                  <a className="has-text-bold" href={applyLink}>
-                    APPLY HERE
-                  </a>
-                  !
+                <h3 className="subtitle has-text-centered has-text-black">
+                  Welcome to the members portal!
                 </h3>
-
                 <br />
                 <div className="container is-flex actions">
                   <Button

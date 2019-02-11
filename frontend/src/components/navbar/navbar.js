@@ -61,7 +61,11 @@ const Navbar = ({
           if (item === "Members") {
             path = { pathname: `/${item.replace(/\s/g, "").toLowerCase()}` };
           } else {
-            path = { hash: `#${item.replace(/\s/g, "")}` };
+            if (item === "Home") {
+              path = { hash: `#` };
+            } else {
+              path = { hash: `#${item.replace(/\s/g, "")}` };
+            }
           }
 
           return (

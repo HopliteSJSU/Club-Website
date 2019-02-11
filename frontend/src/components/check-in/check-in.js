@@ -51,7 +51,9 @@ export default class CheckIn extends Component {
   render() {
     return (
       <div className="container check-in">
-        <p>Please check in by entering your information below! Thanks.</p>
+        <p>
+          Attend our meeting today? Please enter your information below! Thanks
+        </p>
         <br />
         <div className="field">
           <div className="control">
@@ -64,6 +66,7 @@ export default class CheckIn extends Component {
               onKeyPress={this.handleKeyPress}
               ref={node => (this.emailInput = node)}
               autoComplete="off"
+              onFocus={this.scrollView}
             />
           </div>
           <div className="control">

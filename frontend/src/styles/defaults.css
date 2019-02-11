@@ -6942,39 +6942,42 @@ label.panel-block {
 ::selection {
   background-color: rgba(225, 115, 115, 0.5); }
 
-.hoplite-red {
-  color: #fa544b !important; }
+.hoplite-purple {
+  font-weight: bold;
+  background: -webkit-linear-gradient(135deg, #6e8efb, #a777e3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
 
-#leadership, #aboutus {
+.title, .subtitle, .content {
+  color: white; }
+
+body, html {
   background: #161616; }
-  #leadership .title, #leadership .subtitle, #leadership .content, #aboutus .title, #aboutus .subtitle, #aboutus .content {
-    color: white; }
 
-section:not(#home) .container:first-child h3.subtitle {
-  font-weight: bold; }
-
-section:not(#home) .container:first-child:not(.mobile) {
-  padding-top: 3%;
-  padding-left: 7%;
-  padding-right: 7%;
-  padding-bottom: 7%; }
-  section:not(#home) .container:first-child:not(.mobile) h2.title {
-    font-size: 50px !important; }
-  section:not(#home) .container:first-child:not(.mobile) h3.subtitle {
-    margin-top: 1%;
-    margin-bottom: 5%; }
-
-section:not(#home) .container:first-child.mobile {
-  padding-top: 20%;
-  padding-left: 7%;
-  padding-right: 7%;
-  padding-bottom: 20%; }
-  section:not(#home) .container:first-child.mobile h2.title {
-    font-size: 50px !important;
-    margin-bottom: 10%; }
-  section:not(#home) .container:first-child.mobile h3.subtitle {
-    margin-top: 5%;
-    margin-bottom: 15%; }
+section:not(#home) {
+  padding-top: 3%; }
+  section:not(#home) .container:first-child h3.subtitle {
+    font-weight: bold; }
+  section:not(#home) .container:first-child:not(.mobile) {
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 5%; }
+    section:not(#home) .container:first-child:not(.mobile) h2.title {
+      font-size: 50px !important; }
+    section:not(#home) .container:first-child:not(.mobile) h3.subtitle {
+      margin-top: 1%;
+      margin-bottom: 5%; }
+  section:not(#home) .container:first-child.mobile {
+    padding-top: 20%;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 20%; }
+    section:not(#home) .container:first-child.mobile h2.title {
+      font-size: 50px !important;
+      margin-bottom: 10%; }
+    section:not(#home) .container:first-child.mobile h3.subtitle {
+      margin-top: 5%;
+      margin-bottom: 15%; }
 
 /* Import all your sass files from your components here */
 button.button {
@@ -7253,50 +7256,49 @@ header.navbar .navbar-menu {
       transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.2s ease;
       box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
       border-radius: 5px;
-      background-color: #0a0a0a !important;
+      background-color: #262626 !important;
       cursor: pointer; }
       #leadership .container .columns .column .card:hover {
         transform: scale(1.05); }
       #leadership .container .columns .column .card .card-content {
         padding: 1rem !important; }
-        #leadership .container .columns .column .card .card-content .media.media-content .title.is-4 {
-          color: black !important;
-          width: fit-content !important;
-          margin-right: 5% !important; }
       #leadership .container .columns .column .card .card-image .image img {
         border-top-left-radius: 5px !important;
         border-top-right-radius: 5px !important; }
 
 #calendar {
-  background: linear-gradient(to right, rgba(255, 138, 0, 0.5), rgba(218, 27, 96, 0.5)), url("http://sjsuhoplite.org:8080/images/sjsu-tower.jpg");
-  background-size: cover;
-  background-attachment: fixed;
   min-height: 700px !important;
   display: inline-flex !important;
   justify-content: center !important;
   flex-direction: column !important;
   width: 100% !important; }
   #calendar .is-flex {
+    height: 100%;
     width: 100% !important;
-    justify-content: center !important;
-    min-height: 70vh; }
+    justify-content: center !important; }
+    #calendar .is-flex.mobile {
+      min-height: 40vh;
+      flex-direction: column; }
+    #calendar .is-flex.desktop {
+      min-height: 70vh; }
     #calendar .is-flex iframe {
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7); }
 
 #aboutus .container {
   font-size: 1.15rem; }
   #aboutus .container div.content {
-    margin-left: 15%;
-    margin-right: 8%; }
+    margin-left: 6%;
+    margin-right: 1%; }
 
 .footer {
-  padding: 4rem !important; }
+  padding: 3rem !important;
+  background: #161616; }
   .footer .container .columns .column {
     margin-bottom: 25px;
-    justify-content: center;
     width: 100%; }
     .footer .container .columns .column .title {
-      min-width: fit-content; }
+      min-width: fit-content;
+      color: #595959; }
     .footer .container .columns .column .icon {
       font-size: 2rem;
       margin-right: 15px;
@@ -7305,10 +7307,13 @@ header.navbar .navbar-menu {
       height: unset;
       width: fit-content; }
     .footer .container .columns .column .content {
-      display: flex;
-      justify-content: center; }
+      display: flex; }
+      .footer .container .columns .column .content.mobile {
+        justify-content: left; }
+      .footer .container .columns .column .content.desktop {
+        justify-content: center; }
     .footer .container .columns .column .content.contact-us {
-      width: 85%; }
+      width: 100%; }
       .footer .container .columns .column .content.contact-us .title {
         margin-bottom: 0px; }
       .footer .container .columns .column .content.contact-us p {
@@ -7324,20 +7329,18 @@ header.navbar .navbar-menu {
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   min-height: 600px !important;
-  height: 75%;
+  height: 100%;
   border-radius: 0px !important; }
   .modal .modal-card .modal-card-head {
     border-radius: 0px !important; }
   .modal .modal-card .modal-card-body {
     padding-top: 35px;
     border-radius: 0px !important; }
-  .modal .modal-card .container {
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 25px;
-    justify-content: center; }
-    .modal .modal-card .container .button:hover {
-      border-color: white !important; }
+    .modal .modal-card .modal-card-body .container {
+      width: 100%;
+      min-height: 500px;
+      margin-top: 35px;
+      justify-content: center; }
 
 #generate-code {
   margin-top: 20% !important; }
@@ -7354,7 +7357,9 @@ header.navbar .navbar-menu {
     font-size: 1.15rem;
     margin-bottom: 25px; }
   .check-in .field .control {
-    margin-bottom: 25px; }
+    margin-bottom: 15px; }
+    .check-in .field .control .input {
+      margin-bottom: 15px; }
   .check-in .actions button {
     margin-top: 30px !important; }
 

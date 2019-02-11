@@ -1,13 +1,14 @@
 .footer
-  padding: 4rem !important
+  padding: 3rem !important
+  background: #161616
   .container
     .columns
       .column
         margin-bottom: 25px
-        justify-content: center
         width: 100%
         .title
           min-width: fit-content
+          color: hsl(0, 0%, 35%)
         .icon
           font-size: 2rem
           margin-right: 15px
@@ -16,10 +17,13 @@
           height: unset
           width: fit-content
         .content
+          &.mobile
+            justify-content: left
+          &.desktop
+            justify-content: center
           display: flex
-          justify-content: center
         .content.contact-us
-          width: 85%
+          width: 100%
           .title
             margin-bottom: 0px
           p

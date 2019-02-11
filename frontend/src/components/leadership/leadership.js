@@ -37,8 +37,8 @@ class Leadership extends Component {
         <div className={`container ${deviceType}`}>
           <h2 className="title has-text-centered">Leadership</h2>
           <h3 className="subtitle has-text-centered">
-            Meet our <strong className="hoplite-red">awesome</strong> leadership
-            team that focus on all aspects of Hoplite!
+            Meet our <strong className="hoplite-purple">awesome</strong> team
+            that focus on all aspects of the club!
           </h3>
           {columns.map((column, index) => (
             <div className="columns" key={index}>
