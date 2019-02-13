@@ -22,25 +22,25 @@
   -webkit-text-fill-color: transparent
 
 .title, .subtitle, .content
-  color: $white
+  color: white
+
+.subtitle
+  font-weight: bold
 
 body, html
   background: rgb(22,22,22)
 
 section:not(#home)
-  padding-top: 3%
   .container:first-child
-    h3.subtitle
-      font-weight: bold
-    &:not(.mobile)
-      padding-left: 7%
-      padding-right: 7%
-      padding-bottom: 5%
-      h2.title
-        font-size: 50px !important
-      h3.subtitle
-        margin-top: 1%
-        margin-bottom: 5%
+    // &:not(.mobile)
+    //   max-width: 750px
+    //   margin: 0 auto
+    //   padding: 100px 0px 0px 0px
+    //   h2.title
+    //     font-size: 50px !important
+    //   h3.subtitle
+    //     margin-top: 1%
+    //     margin-bottom: 5%
     &.mobile
       padding-top: 20%
       padding-left: 7%

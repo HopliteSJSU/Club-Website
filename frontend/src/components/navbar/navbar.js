@@ -1,14 +1,14 @@
 /* eslint jsx-a11y/anchor-is-valid: 0*/
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Button from "components/button/button";
+// import Button from "components/button/button";
 
 import Logo from "styles/logo.png";
 import SocialMediaIcons from "components/social-media-icons/social-media-icons";
 
-const clicked = () => {
-  window.location.href = "https://goo.gl/forms/1KcEXaY9r4dA2mGi1";
-};
+// const clicked = () => {
+//   window.location.href = "https://goo.gl/forms/1KcEXaY9r4dA2mGi1";
+// };
 
 const homepage = () => {
   window.location.href = "/";

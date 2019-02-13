@@ -37,21 +37,7 @@ class FrontPage extends Component {
   }
 
   handleScrollEvent = () => {
-    //This works but it's not 100% smooth
-    // this.addParallax();
     this.updateScrollY();
-  };
-
-  addParallax = () => {
-    let offset = window.pageYOffset * 0.6 + "px";
-
-    let parallaxHome = document.querySelector("#home");
-    let parallaxCalendar = document.querySelector("#calendar");
-
-    if (parallaxHome && parallaxCalendar) {
-      parallaxHome.style.backgroundPositionY = offset;
-      parallaxCalendar.style.backgroundPositionY = offset;
-    }
   };
 
   updateWidth = () => this.setState({ windowWidth: window.innerWidth });
@@ -98,7 +84,7 @@ class FrontPage extends Component {
       (scrollY <= 100 && activeNavbarItem === "Home") || scrollY === 0;
 
     return (
-      <React.Fragment>
+      <div className="main-container">
         <HeroBanner windowWidth={windowWidth}>
           {defaultNavbar && (
             <Navbar
@@ -127,7 +113,7 @@ class FrontPage extends Component {
         <Calendar windowWidth={windowWidth} />
         <Leadership windowWidth={windowWidth} />
         <Footer />
-      </React.Fragment>
+      </div>
     );
   }
 }

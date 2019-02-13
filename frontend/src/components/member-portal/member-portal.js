@@ -3,7 +3,7 @@ import React from "react";
 import Button from "components/button/button";
 import CheckIn from "components/check-in/check-in";
 
-let applyLink = "https://goo.gl/forms/1KcEXaY9r4dA2mGi1";
+// let applyLink = "https://goo.gl/forms/1KcEXaY9r4dA2mGi1";
 
 class MemberPortal extends React.Component {
   state = {
