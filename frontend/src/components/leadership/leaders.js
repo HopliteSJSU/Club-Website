@@ -1,44 +1,44 @@
 const leaders = [
   {
-    name: "Bruce Lin",
+    name: "Carl Shefcik",
     role: "President",
-    img: "http://sjsuhoplite.org:8080/images/hoplite-team-photos/Bruce_Lin.png",
-    linkedin: "https://www.linkedin.com/in/bruce-lin1218/"
+    img: "https://github.com/HopliteSJSU/headshots/blob/master/headshots/Carl_Shefcik.png?raw=true",
+    linkedin: "https://www.linkedin.com/in/carl-shefcik/"
   },
   {
     name: "Juan Macias",
     role: "Vice President",
     img:
-      "http://sjsuhoplite.org:8080/images/hoplite-team-photos/Juan_Macias.png",
+      "https://github.com/HopliteSJSU/headshots/blob/master/headshots/Juan_Macias.png?raw=true",
     linkedin: "https://www.linkedin.com/in/juanrmacias/"
   },
   {
-    name: "Carl Shefcik",
+    name: "XinRu Lin",
     role: "Treasurer",
     img:
-      "http://sjsuhoplite.org:8080/images/hoplite-team-photos/Carl_Shefcik.png",
-    linkedin: "https://www.linkedin.com/in/carl-shefcik/"
+      "https://github.com/HopliteSJSU/headshots/blob/master/headshots/Xinru_LinkedIn.png?raw=true",
+    linkedin: "https://www.linkedin.com/in/xinrulin/"
   },
   {
-    name: "Natasha Baltazar",
+    name: "Don Robert Pornaras",
     role: "Operations",
     img:
-      "http://sjsuhoplite.org:8080/images/hoplite-team-photos/Natasha_Baltazar.png",
-    linkedin: "https://www.linkedin.com/in/natasha-baltazar14/"
+      "https://github.com/HopliteSJSU/headshots/blob/master/headshots/Don2.png?raw=true",
+    linkedin: "https://www.linkedin.com/in/donrobert-pornaras/"
   },
   {
-    name: "Phillip Rognerud",
+    name: "Jonathan Wong",
     role: "Project Director",
     img:
-      "http://sjsuhoplite.org:8080/images/hoplite-team-photos/Phillip_Rognerud.png",
-    linkedin: "https://www.linkedin.com/in/phillip-rognerud/"
+    "https://github.com/HopliteSJSU/headshots/blob/master/headshots/Jonathan.png?raw=true",
+    linkedin: "https://www.linkedin.com/in/jonathanchiwong/"
   },
   {
-    name: "Saurabh Mithe",
+    name: "Saket Thakare",
     role: "Tech Lead",
     img:
-      "http://sjsuhoplite.org:8080/images/hoplite-team-photos/Saurabh_Mithe.png",
-    linkedin: "https://www.linkedin.com/in/saurabhmithe/"
+      "https://github.com/HopliteSJSU/headshots/blob/master/headshots/Saket2.png?raw=true",
+    linkedin: "https://www.linkedin.com/in/saket-thakare/"
   }
 ];
 
