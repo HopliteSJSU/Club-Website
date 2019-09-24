@@ -18,7 +18,7 @@ const Footer = props => (
             <div className="sub-content is-inline-block">
               <h3 className="title hoplite-purple">Location</h3>
               <p>
-                Thursday 7:30PM @ MQH 234 <br /> Friday 10:00AM @ MQH 226
+                Thursday 6:30PM @ DMH 149B 
               </p>
             </div>
           </div>
