@@ -50,7 +50,7 @@ class HeroBanner extends Component {
               <div className="column is-flex" />
               <div className={`column has-text-centered is-5 ${deviceType}`}>
                 <b className="is-block">Meeting Times:</b>
-                <span className="is-block">Thursday 6:30PM @ DMH 149B</span>
+                <span className="is-block">Tuesdays 6:30 PM SCI 253</span>
               </div>
               <div className="column is-flex" />
             </div>

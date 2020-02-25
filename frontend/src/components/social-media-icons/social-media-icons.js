@@ -3,7 +3,7 @@ import React from "react";
 const SocialMediaIcons = () => (
   <div className="content follow-us">
     <a
-      href="https://join.slack.com/t/sjsuhoplite/shared_invite/enQtNTQwOTYwMDIyODU1LWJiMDlhMjkxMTFlOTMxNzIyNmFiZjQyMTQ2ZGYzNWU5ZjU3OGZkOWI5ZWQ2NTFhNzA1MzAxOTQyYjhjOWQ1YjM"
+      href="https://sjsuhoplite.slack.com"
       className="icon slack"
       title="Slack"
     >

@@ -28,7 +28,7 @@ const leaders = [
   },
   {
     name: "Jonathan Wong",
-    role: "Project Director",
+    role: "Webmaster",
     img:
     "https://github.com/HopliteSJSU/headshots/blob/master/headshots/Jonathan.png?raw=true",
     linkedin: "https://www.linkedin.com/in/jonathanchiwong/"
