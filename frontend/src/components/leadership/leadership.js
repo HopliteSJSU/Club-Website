@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import Card from "./card";
 import leaders from "./leaders";
 
 import uuid from "uuid/v1";
 
-class Leadership extends Component {
+class Leadership extends PureComponent {
   render() {
     const { windowWidth } = this.props;
     let deviceType = windowWidth <= 850 ? "mobile" : "desktop";
