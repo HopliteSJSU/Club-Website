@@ -30,10 +30,9 @@ const AboutUs = ({ windowWidth }) => {
               </h5>
               <ul>
                 <li>Practice coding challenges and discuss solutions</li>
-                <li>Host industry leading tech companies</li>
-                <li>1-1 mock-interview sessions</li>
-                <li>Team-based projects</li>
                 <li>Share internship and interview knowledge</li>
+                <li>1-1 mock-interview sessions</li>
+                <li>Industry and alumni AMAs</li>
               </ul>
             </div>
             <div className="column">
@@ -41,14 +40,13 @@ const AboutUs = ({ windowWidth }) => {
                 Why Join?
               </h5>
               <ul>
-                <li>Priority access to industry events</li>
-                <li>Gain access to shared industry contacts</li>
                 <li>
                   Exposure to verified interview problems and techniques to
                   solve them
                 </li>
+                <li>Gain access to shared industry contacts</li>
+                <li>Workshops on career development</li>
                 <li>Experienced community</li>
-                <li>That sweet Hoplite merch</li>
               </ul>
             </div>
           </div>

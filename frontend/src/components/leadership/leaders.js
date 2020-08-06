@@ -1,16 +1,9 @@
 const leaders = [
   {
-    name: "Carl Shefcik",
+    name: "Alvin Jiang",
     role: "President",
-    img: "https://github.com/HopliteSJSU/headshots/blob/master/headshots/Carl_Shefcik.png?raw=true",
-    linkedin: "https://www.linkedin.com/in/carl-shefcik/"
-  },
-  {
-    name: "Juan Macias",
-    role: "Vice President",
-    img:
-      "https://github.com/HopliteSJSU/headshots/blob/master/headshots/Juan_Macias.png?raw=true",
-    linkedin: "https://www.linkedin.com/in/juanrmacias/"
+    img: "https://github.com/HopliteSJSU/headshots/blob/master/headshots/Alvin.png?raw=false",
+    linkedin: "https://www.linkedin.com/in/ajiang32/"
   },
   {
     name: "XinRu Lin",
@@ -20,25 +13,11 @@ const leaders = [
     linkedin: "https://www.linkedin.com/in/xinrulin/"
   },
   {
-    name: "Don Robert Pornaras",
-    role: "Operations",
-    img:
-      "https://github.com/HopliteSJSU/headshots/blob/master/headshots/Don2.png?raw=true",
-    linkedin: "https://www.linkedin.com/in/donrobert-pornaras/"
-  },
-  {
-    name: "Jonathan Wong",
-    role: "Webmaster",
-    img:
-    "https://github.com/HopliteSJSU/headshots/blob/master/headshots/Jonathan.png?raw=true",
-    linkedin: "https://www.linkedin.com/in/jonathanchiwong/"
-  },
-  {
-    name: "Saket Thakare",
+    name: "Prerana Sunilkumar",
     role: "Tech Lead",
     img:
-      "https://github.com/HopliteSJSU/headshots/blob/master/headshots/Saket2.png?raw=true",
-    linkedin: "https://www.linkedin.com/in/saket-thakare/"
+      "https://github.com/HopliteSJSU/headshots/blob/master/headshots/Prerana.jpg?raw=true",
+    linkedin: "https://www.linkedin.com/in/preranasunilkumar/"
   }
 ];
 
