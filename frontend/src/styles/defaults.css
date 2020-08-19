@@ -7270,7 +7270,7 @@ header.navbar .navbar-menu {
 #leadership .container {
   max-width: 750px;
   margin: 0 auto;
-  padding: 100px 0px 150px 0px; }
+  padding: 100px 0px 0px 0px; }
   #leadership .container h2.title {
     font-size: 50px !important; }
   #leadership .container h3.subtitle {
@@ -7430,3 +7430,10 @@ header.navbar .navbar-menu {
       color: #00aced; }
     .content.follow-us .icon.linkedin:hover {
       color: #0077b5; }
+
+#videointro .container {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 100px 0px 150px 0px; }
+  #videointro .container h2.title {
+    font-size: 50px !important; }

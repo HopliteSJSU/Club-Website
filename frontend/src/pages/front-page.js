@@ -6,6 +6,7 @@ import Leadership from "components/leadership/leadership";
 import Calendar from "components/calendar/calendar";
 import Footer from "components/footer/footer";
 import Navbar from "components/navbar/navbar";
+import VideoIntro from "components/video-intro/video-intro";
 
 import _ from "lodash";
 
@@ -16,7 +17,7 @@ class FrontPage extends Component {
     this.state = {
       windowWidth: window.innerWidth,
       scrollY: window.scrollY,
-      navbarItems: ["Home", "About Us", "Calendar", "Leadership", "Members"],
+      navbarItems: ["Home", "About Us", "Calendar", "Leadership", "Video Intro"],
       activeBurger: false,
       activeNavbarItem: "Home"
     };
@@ -112,6 +113,7 @@ class FrontPage extends Component {
         <AboutUs windowWidth={windowWidth} />
         <Calendar windowWidth={windowWidth} />
         <Leadership windowWidth={windowWidth} />
+        <VideoIntro windowWidth={windowWidth} />
         <Footer />
       </div>
     );
