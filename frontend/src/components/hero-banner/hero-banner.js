@@ -40,7 +40,7 @@ class HeroBanner extends Component {
                 <Typer />
               </h2>
             </div>
-            <EmailSubscribe deviceType={deviceType} />
+            {/* <EmailSubscribe deviceType={deviceType} /> */}
           </div>
         </div>
 
