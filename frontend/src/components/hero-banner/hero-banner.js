@@ -40,6 +40,17 @@ class HeroBanner extends Component {
                 <Typer />
               </h2>
             </div>
+            <div className="container is-flex noselect "
+              style={{
+                justifyContent: "center",
+                flexDirection: "column",
+                textAlign: "center",
+              }}>
+              <h2
+                className={`subtitle ${subtitleSize}`}
+                style={{ minHeight: "80px" }}
+              >To get the latest updates, join our Slack channel located on the top-right!</h2>
+            </div>
             {/* <EmailSubscribe deviceType={deviceType} /> */}
           </div>
         </div>
