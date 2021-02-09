@@ -19,13 +19,6 @@ const leaders = [
       "https://github.com/HopliteSJSU/headshots/blob/master/headshots/Prerana.jpg?raw=true",
     linkedin: "https://www.linkedin.com/in/preranasunilkumar/"
   },
-  {
-    name: "Junzhe(Tony) Liang",
-    role: "Vice President",
-    img:
-      "https://github.com/HopliteSJSU/headshots/blob/master/headshots/Tony.png?raw=true",
-    linkedin: "https://www.linkedin.com/in/tony1120/"
-  }
 ];
 
 export default leaders;

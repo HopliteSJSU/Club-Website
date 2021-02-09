@@ -17,7 +17,7 @@ class FrontPage extends Component {
     this.state = {
       windowWidth: window.innerWidth,
       scrollY: window.scrollY,
-      navbarItems: ["Home", "About Us", "Calendar", "Leadership", "Video Intro"],
+      navbarItems: ["Home", "About Us", "Calendar", "Leadership"],
       activeBurger: false,
       activeNavbarItem: "Home"
     };
@@ -113,7 +113,7 @@ class FrontPage extends Component {
         <AboutUs windowWidth={windowWidth} />
         <Calendar windowWidth={windowWidth} />
         <Leadership windowWidth={windowWidth} />
-        <VideoIntro windowWidth={windowWidth} />
+        {/* <VideoIntro windowWidth={windowWidth} /> */}
         <Footer />
       </div>
     );

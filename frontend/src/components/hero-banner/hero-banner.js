@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import EmailSubscribe from "components/email-sub/email-sub";
+import SlackInvite from "components/email-sub/slack-invite"
 import Typer from "components/animations/typer/typer";
 
 class HeroBanner extends Component {
@@ -46,11 +47,14 @@ class HeroBanner extends Component {
                 flexDirection: "column",
                 textAlign: "center",
               }}>
-              <h2
-                className={`subtitle ${subtitleSize}`}
-                style={{ minHeight: "80px" }}
-              >To get the latest updates, join our Slack channel located on the top-right!</h2>
+              <div>
+                <h2
+                  className={`subtitle ${subtitleSize}`}
+                  style={{ minHeight: "80px" }}
+                >To get the latest updates, join our Slack channel!</h2>
+              </div>
             </div>
+            {<SlackInvite>Join Now</SlackInvite>}
             {/* <EmailSubscribe deviceType={deviceType} /> */}
           </div>
         </div>
@@ -61,7 +65,7 @@ class HeroBanner extends Component {
               <div className="column is-flex" />
               <div className={`column has-text-centered is-5 ${deviceType}`}>
                 <b className="is-block">Meeting Times:</b>
-                <span className="is-block">Fridays 11:00 AM on Zoom</span>
+                <span className="is-block">Fridays 3:00 PM on Zoom</span>
               </div>
               <div className="column is-flex" />
             </div>
