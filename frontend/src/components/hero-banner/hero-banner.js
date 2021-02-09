@@ -54,7 +54,7 @@ class HeroBanner extends Component {
                 >To get the latest updates, join our Slack channel!</h2>
               </div>
             </div>
-            {<SlackInvite>Join Now</SlackInvite>}
+            {<SlackInvite deviceType={deviceType}></SlackInvite>}
             {/* <EmailSubscribe deviceType={deviceType} /> */}
           </div>
         </div>
